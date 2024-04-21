@@ -1,1 +1,0 @@
-/home/lattinone/catkin_ws/simple_planner/devel/.private/catkin_tools_prebuild/lib/pkgconfig/catkin_tools_prebuild.pc
