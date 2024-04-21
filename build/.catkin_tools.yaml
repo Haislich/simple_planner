@@ -1,0 +1,6 @@
+devel_space: /home/lattinone/catkin_ws/simple_planner/devel
+install: false
+install_space: /home/lattinone/catkin_ws/simple_planner/install
+profile: default
+source_space: /home/lattinone/catkin_ws/simple_planner/src
+workspace: /home/lattinone/catkin_ws/simple_planner

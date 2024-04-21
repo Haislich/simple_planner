@@ -1,0 +1,1 @@
+/home/lattinone/catkin_ws/simple_planner/devel/.private/catkin_tools_prebuild/local_setup.sh
