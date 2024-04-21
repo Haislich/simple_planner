@@ -1,0 +1,4 @@
+[35m[1mScanning dependencies of target simple_planner_node[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/simple_planner_node.dir/src/simple_planner_node.cpp.o[0m
+[100%] [32m[1mLinking CXX executable /home/lattinone/catkin_ws/simple_planner_ws/devel/.private/simple_planner/lib/simple_planner/simple_planner_node[0m
+[100%] Built target simple_planner_node
