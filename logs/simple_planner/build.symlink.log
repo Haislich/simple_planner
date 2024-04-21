@@ -1,0 +1,4 @@
+Symlinking /home/lattinone/catkin_ws/simple_planner_ws/devel/share/simple_planner/cmake/simple_plannerConfig-version.cmake
+Symlinking /home/lattinone/catkin_ws/simple_planner_ws/devel/share/simple_planner/cmake/simple_plannerConfig.cmake
+Symlinking /home/lattinone/catkin_ws/simple_planner_ws/devel/lib/pkgconfig/simple_planner.pc
+Symlinking /home/lattinone/catkin_ws/simple_planner_ws/devel/lib/simple_planner/simple_planner_node

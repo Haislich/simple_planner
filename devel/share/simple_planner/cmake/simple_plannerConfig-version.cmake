@@ -1,0 +1,1 @@
+/home/lattinone/catkin_ws/simple_planner_ws/devel/.private/simple_planner/share/simple_planner/cmake/simple_plannerConfig-version.cmake

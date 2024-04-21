@@ -1,2 +1,0 @@
-
--DCATKIN_DEVEL_PREFIX=/home/lattinone/catkin_ws/simple_planner_ws/devel -DCMAKE_INSTALL_PREFIX=/home/lattinone/catkin_ws/simple_planner_ws/install -G Unix Makefiles
