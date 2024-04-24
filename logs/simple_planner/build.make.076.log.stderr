@@ -1,0 +1,380 @@
+[01m[K/home/lattinone/catkin_ws/simple_planner_ws/src/simple_planner/src/main_node.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/lattinone/catkin_ws/simple_planner_ws/src/simple_planner/src/main_node.cpp:21:46:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Kcv::Mat::at(cv::Point2d)[m[K’
+   21 |             cout << image.at(cv::Point2d(i,j)[01;31m[K)[m[K;
+      |                                              [01;31m[K^[m[K
+In file included from [01m[K/usr/include/opencv4/opencv2/core.hpp:59[m[K,
+                 from [01m[K/usr/include/opencv4/opencv2/opencv.hpp:52[m[K,
+                 from [01m[K/home/lattinone/catkin_ws/simple_planner_ws/src/simple_planner/src/main_node.cpp:2[m[K:
+[01m[K/usr/include/opencv4/opencv2/core/mat.hpp:1911:33:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp> _Tp& cv::Mat::at(int)[m[K’
+ 1911 |     template<typename _Tp> _Tp& [01;36m[Kat[m[K(int i0=0);
+      |                                 [01;36m[K^~[m[K
+[01m[K/usr/include/opencv4/opencv2/core/mat.hpp:1911:33:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/lattinone/catkin_ws/simple_planner_ws/src/simple_planner/src/main_node.cpp:21:46:[m[K [01;36m[Knote: [m[K  couldn’t deduce template parameter ‘[01m[K_Tp[m[K’
+   21 |             cout << image.at(cv::Point2d(i,j)[01;36m[K)[m[K;
+      |                                              [01;36m[K^[m[K
+In file included from [01m[K/usr/include/opencv4/opencv2/core.hpp:59[m[K,
+                 from [01m[K/usr/include/opencv4/opencv2/opencv.hpp:52[m[K,
+                 from [01m[K/home/lattinone/catkin_ws/simple_planner_ws/src/simple_planner/src/main_node.cpp:2[m[K:
+[01m[K/usr/include/opencv4/opencv2/core/mat.hpp:1915:39:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp> const _Tp& cv::Mat::at(int) const[m[K’
+ 1915 |     template<typename _Tp> const _Tp& [01;36m[Kat[m[K(int i0=0) const;
+      |                                       [01;36m[K^~[m[K
+[01m[K/usr/include/opencv4/opencv2/core/mat.hpp:1915:39:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/lattinone/catkin_ws/simple_planner_ws/src/simple_planner/src/main_node.cpp:21:46:[m[K [01;36m[Knote: [m[K  couldn’t deduce template parameter ‘[01m[K_Tp[m[K’
+   21 |             cout << image.at(cv::Point2d(i,j)[01;36m[K)[m[K;
+      |                                              [01;36m[K^[m[K
+In file included from [01m[K/usr/include/opencv4/opencv2/core.hpp:59[m[K,
+                 from [01m[K/usr/include/opencv4/opencv2/opencv.hpp:52[m[K,
+                 from [01m[K/home/lattinone/catkin_ws/simple_planner_ws/src/simple_planner/src/main_node.cpp:2[m[K:
+[01m[K/usr/include/opencv4/opencv2/core/mat.hpp:1920:33:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp> _Tp& cv::Mat::at(int, int)[m[K’
+ 1920 |     template<typename _Tp> _Tp& [01;36m[Kat[m[K(int row, int col);
+      |                                 [01;36m[K^~[m[K
+[01m[K/usr/include/opencv4/opencv2/core/mat.hpp:1920:33:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/lattinone/catkin_ws/simple_planner_ws/src/simple_planner/src/main_node.cpp:21:46:[m[K [01;36m[Knote: [m[K  candidate expects 2 arguments, 1 provided
+   21 |             cout << image.at(cv::Point2d(i,j)[01;36m[K)[m[K;
+      |                                              [01;36m[K^[m[K
+In file included from [01m[K/usr/include/opencv4/opencv2/core.hpp:59[m[K,
+                 from [01m[K/usr/include/opencv4/opencv2/opencv.hpp:52[m[K,
+                 from [01m[K/home/lattinone/catkin_ws/simple_planner_ws/src/simple_planner/src/main_node.cpp:2[m[K:
+[01m[K/usr/include/opencv4/opencv2/core/mat.hpp:1925:39:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp> const _Tp& cv::Mat::at(int, int) const[m[K’
+ 1925 |     template<typename _Tp> const _Tp& [01;36m[Kat[m[K(int row, int col) const;
+      |                                       [01;36m[K^~[m[K
+[01m[K/usr/include/opencv4/opencv2/core/mat.hpp:1925:39:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/lattinone/catkin_ws/simple_planner_ws/src/simple_planner/src/main_node.cpp:21:46:[m[K [01;36m[Knote: [m[K  candidate expects 2 arguments, 1 provided
+   21 |             cout << image.at(cv::Point2d(i,j)[01;36m[K)[m[K;
+      |                                              [01;36m[K^[m[K
+In file included from [01m[K/usr/include/opencv4/opencv2/core.hpp:59[m[K,
+                 from [01m[K/usr/include/opencv4/opencv2/opencv.hpp:52[m[K,
+                 from [01m[K/home/lattinone/catkin_ws/simple_planner_ws/src/simple_planner/src/main_node.cpp:2[m[K:
+[01m[K/usr/include/opencv4/opencv2/core/mat.hpp:1932:33:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp> _Tp& cv::Mat::at(int, int, int)[m[K’
+ 1932 |     template<typename _Tp> _Tp& [01;36m[Kat[m[K(int i0, int i1, int i2);
+      |                                 [01;36m[K^~[m[K
+[01m[K/usr/include/opencv4/opencv2/core/mat.hpp:1932:33:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/lattinone/catkin_ws/simple_planner_ws/src/simple_planner/src/main_node.cpp:21:46:[m[K [01;36m[Knote: [m[K  candidate expects 3 arguments, 1 provided
+   21 |             cout << image.at(cv::Point2d(i,j)[01;36m[K)[m[K;
+      |                                              [01;36m[K^[m[K
+In file included from [01m[K/usr/include/opencv4/opencv2/core.hpp:59[m[K,
+                 from [01m[K/usr/include/opencv4/opencv2/opencv.hpp:52[m[K,
+                 from [01m[K/home/lattinone/catkin_ws/simple_planner_ws/src/simple_planner/src/main_node.cpp:2[m[K:
+[01m[K/usr/include/opencv4/opencv2/core/mat.hpp:1938:39:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp> const _Tp& cv::Mat::at(int, int, int) const[m[K’
+ 1938 |     template<typename _Tp> const _Tp& [01;36m[Kat[m[K(int i0, int i1, int i2) const;
+      |                                       [01;36m[K^~[m[K
+[01m[K/usr/include/opencv4/opencv2/core/mat.hpp:1938:39:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/lattinone/catkin_ws/simple_planner_ws/src/simple_planner/src/main_node.cpp:21:46:[m[K [01;36m[Knote: [m[K  candidate expects 3 arguments, 1 provided
+   21 |             cout << image.at(cv::Point2d(i,j)[01;36m[K)[m[K;
+      |                                              [01;36m[K^[m[K
+In file included from [01m[K/usr/include/opencv4/opencv2/core.hpp:59[m[K,
+                 from [01m[K/usr/include/opencv4/opencv2/opencv.hpp:52[m[K,
+                 from [01m[K/home/lattinone/catkin_ws/simple_planner_ws/src/simple_planner/src/main_node.cpp:2[m[K:
+[01m[K/usr/include/opencv4/opencv2/core/mat.hpp:1943:33:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp> _Tp& cv::Mat::at(const int*)[m[K’
+ 1943 |     template<typename _Tp> _Tp& [01;36m[Kat[m[K(const int* idx);
+      |                                 [01;36m[K^~[m[K
+[01m[K/usr/include/opencv4/opencv2/core/mat.hpp:1943:33:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/lattinone/catkin_ws/simple_planner_ws/src/simple_planner/src/main_node.cpp:21:46:[m[K [01;36m[Knote: [m[K  couldn’t deduce template parameter ‘[01m[K_Tp[m[K’
+   21 |             cout << image.at(cv::Point2d(i,j)[01;36m[K)[m[K;
+      |                                              [01;36m[K^[m[K
+In file included from [01m[K/usr/include/opencv4/opencv2/core.hpp:59[m[K,
+                 from [01m[K/usr/include/opencv4/opencv2/opencv.hpp:52[m[K,
+                 from [01m[K/home/lattinone/catkin_ws/simple_planner_ws/src/simple_planner/src/main_node.cpp:2[m[K:
+[01m[K/usr/include/opencv4/opencv2/core/mat.hpp:1947:39:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp> const _Tp& cv::Mat::at(const int*) const[m[K’
+ 1947 |     template<typename _Tp> const _Tp& [01;36m[Kat[m[K(const int* idx) const;
+      |                                       [01;36m[K^~[m[K
+[01m[K/usr/include/opencv4/opencv2/core/mat.hpp:1947:39:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/lattinone/catkin_ws/simple_planner_ws/src/simple_planner/src/main_node.cpp:21:46:[m[K [01;36m[Knote: [m[K  couldn’t deduce template parameter ‘[01m[K_Tp[m[K’
+   21 |             cout << image.at(cv::Point2d(i,j)[01;36m[K)[m[K;
+      |                                              [01;36m[K^[m[K
+In file included from [01m[K/usr/include/opencv4/opencv2/core.hpp:59[m[K,
+                 from [01m[K/usr/include/opencv4/opencv2/opencv.hpp:52[m[K,
+                 from [01m[K/home/lattinone/catkin_ws/simple_planner_ws/src/simple_planner/src/main_node.cpp:2[m[K:
+[01m[K/usr/include/opencv4/opencv2/core/mat.hpp:1950:40:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp, int n> _Tp& cv::Mat::at(const cv::Vec<int, n>&)[m[K’
+ 1950 |     template<typename _Tp, int n> _Tp& [01;36m[Kat[m[K(const Vec<int, n>& idx);
+      |                                        [01;36m[K^~[m[K
+[01m[K/usr/include/opencv4/opencv2/core/mat.hpp:1950:40:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/lattinone/catkin_ws/simple_planner_ws/src/simple_planner/src/main_node.cpp:21:46:[m[K [01;36m[Knote: [m[K  ‘[01m[Kcv::Point2d[m[K’ {aka ‘[01m[Kcv::Point_<double>[m[K’} is not derived from ‘[01m[Kconst cv::Vec<int, n>[m[K’
+   21 |             cout << image.at(cv::Point2d(i,j)[01;36m[K)[m[K;
+      |                                              [01;36m[K^[m[K
+In file included from [01m[K/usr/include/opencv4/opencv2/core.hpp:59[m[K,
+                 from [01m[K/usr/include/opencv4/opencv2/opencv.hpp:52[m[K,
+                 from [01m[K/home/lattinone/catkin_ws/simple_planner_ws/src/simple_planner/src/main_node.cpp:2[m[K:
+[01m[K/usr/include/opencv4/opencv2/core/mat.hpp:1952:46:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp, int n> const _Tp& cv::Mat::at(const cv::Vec<int, n>&) const[m[K’
+ 1952 |     template<typename _Tp, int n> const _Tp& [01;36m[Kat[m[K(const Vec<int, n>& idx) const;
+      |                                              [01;36m[K^~[m[K
+[01m[K/usr/include/opencv4/opencv2/core/mat.hpp:1952:46:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/lattinone/catkin_ws/simple_planner_ws/src/simple_planner/src/main_node.cpp:21:46:[m[K [01;36m[Knote: [m[K  ‘[01m[Kcv::Point2d[m[K’ {aka ‘[01m[Kcv::Point_<double>[m[K’} is not derived from ‘[01m[Kconst cv::Vec<int, n>[m[K’
+   21 |             cout << image.at(cv::Point2d(i,j)[01;36m[K)[m[K;
+      |                                              [01;36m[K^[m[K
+In file included from [01m[K/usr/include/opencv4/opencv2/core.hpp:59[m[K,
+                 from [01m[K/usr/include/opencv4/opencv2/opencv.hpp:52[m[K,
+                 from [01m[K/home/lattinone/catkin_ws/simple_planner_ws/src/simple_planner/src/main_node.cpp:2[m[K:
+[01m[K/usr/include/opencv4/opencv2/core/mat.hpp:1958:33:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp> _Tp& cv::Mat::at(cv::Point)[m[K’
+ 1958 |     template<typename _Tp> _Tp& [01;36m[Kat[m[K(Point pt);
+      |                                 [01;36m[K^~[m[K
+[01m[K/usr/include/opencv4/opencv2/core/mat.hpp:1958:33:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/lattinone/catkin_ws/simple_planner_ws/src/simple_planner/src/main_node.cpp:21:46:[m[K [01;36m[Knote: [m[K  couldn’t deduce template parameter ‘[01m[K_Tp[m[K’
+   21 |             cout << image.at(cv::Point2d(i,j)[01;36m[K)[m[K;
+      |                                              [01;36m[K^[m[K
+In file included from [01m[K/usr/include/opencv4/opencv2/core.hpp:59[m[K,
+                 from [01m[K/usr/include/opencv4/opencv2/opencv.hpp:52[m[K,
+                 from [01m[K/home/lattinone/catkin_ws/simple_planner_ws/src/simple_planner/src/main_node.cpp:2[m[K:
+[01m[K/usr/include/opencv4/opencv2/core/mat.hpp:1963:39:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp> const _Tp& cv::Mat::at(cv::Point) const[m[K’
+ 1963 |     template<typename _Tp> const _Tp& [01;36m[Kat[m[K(Point pt) const;
+      |                                       [01;36m[K^~[m[K
+[01m[K/usr/include/opencv4/opencv2/core/mat.hpp:1963:39:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/lattinone/catkin_ws/simple_planner_ws/src/simple_planner/src/main_node.cpp:21:46:[m[K [01;36m[Knote: [m[K  couldn’t deduce template parameter ‘[01m[K_Tp[m[K’
+   21 |             cout << image.at(cv::Point2d(i,j)[01;36m[K)[m[K;
+      |                                              [01;36m[K^[m[K
+[01m[K/home/lattinone/catkin_ws/simple_planner_ws/src/simple_planner/src/main_node.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/lattinone/catkin_ws/simple_planner_ws/src/simple_planner/src/main_node.cpp:21:46:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Kcv::Mat::at(cv::Point2d)[m[K’
+   21 |             cout << image.at(cv::Point2d(i,j)[01;31m[K)[m[K;
+      |                                              [01;31m[K^[m[K
+In file included from [01m[K/usr/include/opencv4/opencv2/core.hpp:59[m[K,
+                 from [01m[K/usr/include/opencv4/opencv2/opencv.hpp:52[m[K,
+                 from [01m[K/home/lattinone/catkin_ws/simple_planner_ws/src/simple_planner/src/main_node.cpp:2[m[K:
+[01m[K/usr/include/opencv4/opencv2/core/mat.hpp:1911:33:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp> _Tp& cv::Mat::at(int)[m[K’
+ 1911 |     template<typename _Tp> _Tp& [01;36m[Kat[m[K(int i0=0);
+      |                                 [01;36m[K^~[m[K
+[01m[K/usr/include/opencv4/opencv2/core/mat.hpp:1911:33:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/lattinone/catkin_ws/simple_planner_ws/src/simple_planner/src/main_node.cpp:21:46:[m[K [01;36m[Knote: [m[K  couldn’t deduce template parameter ‘[01m[K_Tp[m[K’
+   21 |             cout << image.at(cv::Point2d(i,j)[01;36m[K)[m[K;
+      |                                              [01;36m[K^[m[K
+In file included from [01m[K/usr/include/opencv4/opencv2/core.hpp:59[m[K,
+                 from [01m[K/usr/include/opencv4/opencv2/opencv.hpp:52[m[K,
+                 from [01m[K/home/lattinone/catkin_ws/simple_planner_ws/src/simple_planner/src/main_node.cpp:2[m[K:
+[01m[K/usr/include/opencv4/opencv2/core/mat.hpp:1915:39:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp> const _Tp& cv::Mat::at(int) const[m[K’
+ 1915 |     template<typename _Tp> const _Tp& [01;36m[Kat[m[K(int i0=0) const;
+      |                                       [01;36m[K^~[m[K
+[01m[K/usr/include/opencv4/opencv2/core/mat.hpp:1915:39:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/lattinone/catkin_ws/simple_planner_ws/src/simple_planner/src/main_node.cpp:21:46:[m[K [01;36m[Knote: [m[K  couldn’t deduce template parameter ‘[01m[K_Tp[m[K’
+   21 |             cout << image.at(cv::Point2d(i,j)[01;36m[K)[m[K;
+      |                                              [01;36m[K^[m[K
+In file included from [01m[K/usr/include/opencv4/opencv2/core.hpp:59[m[K,
+                 from [01m[K/usr/include/opencv4/opencv2/opencv.hpp:52[m[K,
+                 from [01m[K/home/lattinone/catkin_ws/simple_planner_ws/src/simple_planner/src/main_node.cpp:2[m[K:
+[01m[K/usr/include/opencv4/opencv2/core/mat.hpp:1920:33:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp> _Tp& cv::Mat::at(int, int)[m[K’
+ 1920 |     template<typename _Tp> _Tp& [01;36m[Kat[m[K(int row, int col);
+      |                                 [01;36m[K^~[m[K
+[01m[K/usr/include/opencv4/opencv2/core/mat.hpp:1920:33:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/lattinone/catkin_ws/simple_planner_ws/src/simple_planner/src/main_node.cpp:21:46:[m[K [01;36m[Knote: [m[K  candidate expects 2 arguments, 1 provided
+   21 |             cout << image.at(cv::Point2d(i,j)[01;36m[K)[m[K;
+      |                                              [01;36m[K^[m[K
+In file included from [01m[K/usr/include/opencv4/opencv2/core.hpp:59[m[K,
+                 from [01m[K/usr/include/opencv4/opencv2/opencv.hpp:52[m[K,
+                 from [01m[K/home/lattinone/catkin_ws/simple_planner_ws/src/simple_planner/src/main_node.cpp:2[m[K:
+[01m[K/usr/include/opencv4/opencv2/core/mat.hpp:1925:39:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp> const _Tp& cv::Mat::at(int, int) const[m[K’
+ 1925 |     template<typename _Tp> const _Tp& [01;36m[Kat[m[K(int row, int col) const;
+      |                                       [01;36m[K^~[m[K
+[01m[K/usr/include/opencv4/opencv2/core/mat.hpp:1925:39:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/lattinone/catkin_ws/simple_planner_ws/src/simple_planner/src/main_node.cpp:21:46:[m[K [01;36m[Knote: [m[K  candidate expects 2 arguments, 1 provided
+   21 |             cout << image.at(cv::Point2d(i,j)[01;36m[K)[m[K;
+      |                                              [01;36m[K^[m[K
+In file included from [01m[K/usr/include/opencv4/opencv2/core.hpp:59[m[K,
+                 from [01m[K/usr/include/opencv4/opencv2/opencv.hpp:52[m[K,
+                 from [01m[K/home/lattinone/catkin_ws/simple_planner_ws/src/simple_planner/src/main_node.cpp:2[m[K:
+[01m[K/usr/include/opencv4/opencv2/core/mat.hpp:1932:33:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp> _Tp& cv::Mat::at(int, int, int)[m[K’
+ 1932 |     template<typename _Tp> _Tp& [01;36m[Kat[m[K(int i0, int i1, int i2);
+      |                                 [01;36m[K^~[m[K
+[01m[K/usr/include/opencv4/opencv2/core/mat.hpp:1932:33:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/lattinone/catkin_ws/simple_planner_ws/src/simple_planner/src/main_node.cpp:21:46:[m[K [01;36m[Knote: [m[K  candidate expects 3 arguments, 1 provided
+   21 |             cout << image.at(cv::Point2d(i,j)[01;36m[K)[m[K;
+      |                                              [01;36m[K^[m[K
+In file included from [01m[K/usr/include/opencv4/opencv2/core.hpp:59[m[K,
+                 from [01m[K/usr/include/opencv4/opencv2/opencv.hpp:52[m[K,
+                 from [01m[K/home/lattinone/catkin_ws/simple_planner_ws/src/simple_planner/src/main_node.cpp:2[m[K:
+[01m[K/usr/include/opencv4/opencv2/core/mat.hpp:1938:39:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp> const _Tp& cv::Mat::at(int, int, int) const[m[K’
+ 1938 |     template<typename _Tp> const _Tp& [01;36m[Kat[m[K(int i0, int i1, int i2) const;
+      |                                       [01;36m[K^~[m[K
+[01m[K/usr/include/opencv4/opencv2/core/mat.hpp:1938:39:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/lattinone/catkin_ws/simple_planner_ws/src/simple_planner/src/main_node.cpp:21:46:[m[K [01;36m[Knote: [m[K  candidate expects 3 arguments, 1 provided
+   21 |             cout << image.at(cv::Point2d(i,j)[01;36m[K)[m[K;
+      |                                              [01;36m[K^[m[K
+In file included from [01m[K/usr/include/opencv4/opencv2/core.hpp:59[m[K,
+                 from [01m[K/usr/include/opencv4/opencv2/opencv.hpp:52[m[K,
+                 from [01m[K/home/lattinone/catkin_ws/simple_planner_ws/src/simple_planner/src/main_node.cpp:2[m[K:
+[01m[K/usr/include/opencv4/opencv2/core/mat.hpp:1943:33:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp> _Tp& cv::Mat::at(const int*)[m[K’
+ 1943 |     template<typename _Tp> _Tp& [01;36m[Kat[m[K(const int* idx);
+      |                                 [01;36m[K^~[m[K
+[01m[K/usr/include/opencv4/opencv2/core/mat.hpp:1943:33:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/lattinone/catkin_ws/simple_planner_ws/src/simple_planner/src/main_node.cpp:21:46:[m[K [01;36m[Knote: [m[K  couldn’t deduce template parameter ‘[01m[K_Tp[m[K’
+   21 |             cout << image.at(cv::Point2d(i,j)[01;36m[K)[m[K;
+      |                                              [01;36m[K^[m[K
+In file included from [01m[K/usr/include/opencv4/opencv2/core.hpp:59[m[K,
+                 from [01m[K/usr/include/opencv4/opencv2/opencv.hpp:52[m[K,
+                 from [01m[K/home/lattinone/catkin_ws/simple_planner_ws/src/simple_planner/src/main_node.cpp:2[m[K:
+[01m[K/usr/include/opencv4/opencv2/core/mat.hpp:1947:39:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp> const _Tp& cv::Mat::at(const int*) const[m[K’
+ 1947 |     template<typename _Tp> const _Tp& [01;36m[Kat[m[K(const int* idx) const;
+      |                                       [01;36m[K^~[m[K
+[01m[K/usr/include/opencv4/opencv2/core/mat.hpp:1947:39:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/lattinone/catkin_ws/simple_planner_ws/src/simple_planner/src/main_node.cpp:21:46:[m[K [01;36m[Knote: [m[K  couldn’t deduce template parameter ‘[01m[K_Tp[m[K’
+   21 |             cout << image.at(cv::Point2d(i,j)[01;36m[K)[m[K;
+      |                                              [01;36m[K^[m[K
+In file included from [01m[K/usr/include/opencv4/opencv2/core.hpp:59[m[K,
+                 from [01m[K/usr/include/opencv4/opencv2/opencv.hpp:52[m[K,
+                 from [01m[K/home/lattinone/catkin_ws/simple_planner_ws/src/simple_planner/src/main_node.cpp:2[m[K:
+[01m[K/usr/include/opencv4/opencv2/core/mat.hpp:1950:40:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp, int n> _Tp& cv::Mat::at(const cv::Vec<int, n>&)[m[K’
+ 1950 |     template<typename _Tp, int n> _Tp& [01;36m[Kat[m[K(const Vec<int, n>& idx);
+      |                                        [01;36m[K^~[m[K
+[01m[K/usr/include/opencv4/opencv2/core/mat.hpp:1950:40:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/lattinone/catkin_ws/simple_planner_ws/src/simple_planner/src/main_node.cpp:21:46:[m[K [01;36m[Knote: [m[K  ‘[01m[Kcv::Point2d[m[K’ {aka ‘[01m[Kcv::Point_<double>[m[K’} is not derived from ‘[01m[Kconst cv::Vec<int, n>[m[K’
+   21 |             cout << image.at(cv::Point2d(i,j)[01;36m[K)[m[K;
+      |                                              [01;36m[K^[m[K
+In file included from [01m[K/usr/include/opencv4/opencv2/core.hpp:59[m[K,
+                 from [01m[K/usr/include/opencv4/opencv2/opencv.hpp:52[m[K,
+                 from [01m[K/home/lattinone/catkin_ws/simple_planner_ws/src/simple_planner/src/main_node.cpp:2[m[K:
+[01m[K/usr/include/opencv4/opencv2/core/mat.hpp:1952:46:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp, int n> const _Tp& cv::Mat::at(const cv::Vec<int, n>&) const[m[K’
+ 1952 |     template<typename _Tp, int n> const _Tp& [01;36m[Kat[m[K(const Vec<int, n>& idx) const;
+      |                                              [01;36m[K^~[m[K
+[01m[K/usr/include/opencv4/opencv2/core/mat.hpp:1952:46:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/lattinone/catkin_ws/simple_planner_ws/src/simple_planner/src/main_node.cpp:21:46:[m[K [01;36m[Knote: [m[K  ‘[01m[Kcv::Point2d[m[K’ {aka ‘[01m[Kcv::Point_<double>[m[K’} is not derived from ‘[01m[Kconst cv::Vec<int, n>[m[K’
+   21 |             cout << image.at(cv::Point2d(i,j)[01;36m[K)[m[K;
+      |                                              [01;36m[K^[m[K
+In file included from [01m[K/usr/include/opencv4/opencv2/core.hpp:59[m[K,
+                 from [01m[K/usr/include/opencv4/opencv2/opencv.hpp:52[m[K,
+                 from [01m[K/home/lattinone/catkin_ws/simple_planner_ws/src/simple_planner/src/main_node.cpp:2[m[K:
+[01m[K/usr/include/opencv4/opencv2/core/mat.hpp:1958:33:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp> _Tp& cv::Mat::at(cv::Point)[m[K’
+ 1958 |     template<typename _Tp> _Tp& [01;36m[Kat[m[K(Point pt);
+      |                                 [01;36m[K^~[m[K
+[01m[K/usr/include/opencv4/opencv2/core/mat.hpp:1958:33:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/lattinone/catkin_ws/simple_planner_ws/src/simple_planner/src/main_node.cpp:21:46:[m[K [01;36m[Knote: [m[K  couldn’t deduce template parameter ‘[01m[K_Tp[m[K’
+   21 |             cout << image.at(cv::Point2d(i,j)[01;36m[K)[m[K;
+      |                                              [01;36m[K^[m[K
+In file included from [01m[K/usr/include/opencv4/opencv2/core.hpp:59[m[K,
+                 from [01m[K/usr/include/opencv4/opencv2/opencv.hpp:52[m[K,
+                 from [01m[K/home/lattinone/catkin_ws/simple_planner_ws/src/simple_planner/src/main_node.cpp:2[m[K:
+[01m[K/usr/include/opencv4/opencv2/core/mat.hpp:1963:39:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp> const _Tp& cv::Mat::at(cv::Point) const[m[K’
+ 1963 |     template<typename _Tp> const _Tp& [01;36m[Kat[m[K(Point pt) const;
+      |                                       [01;36m[K^~[m[K
+[01m[K/usr/include/opencv4/opencv2/core/mat.hpp:1963:39:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/lattinone/catkin_ws/simple_planner_ws/src/simple_planner/src/main_node.cpp:21:46:[m[K [01;36m[Knote: [m[K  couldn’t deduce template parameter ‘[01m[K_Tp[m[K’
+   21 |             cout << image.at(cv::Point2d(i,j)[01;36m[K)[m[K;
+      |                                              [01;36m[K^[m[K
+[01m[K/home/lattinone/catkin_ws/simple_planner_ws/src/simple_planner/src/main_node.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/lattinone/catkin_ws/simple_planner_ws/src/simple_planner/src/main_node.cpp:21:46:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Kcv::Mat::at(cv::Point2d)[m[K’
+   21 |             cout << image.at(cv::Point2d(i,j)[01;31m[K)[m[K;
+      |                                              [01;31m[K^[m[K
+In file included from [01m[K/usr/include/opencv4/opencv2/core.hpp:59[m[K,
+                 from [01m[K/usr/include/opencv4/opencv2/opencv.hpp:52[m[K,
+                 from [01m[K/home/lattinone/catkin_ws/simple_planner_ws/src/simple_planner/src/main_node.cpp:2[m[K:
+[01m[K/usr/include/opencv4/opencv2/core/mat.hpp:1911:33:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp> _Tp& cv::Mat::at(int)[m[K’
+ 1911 |     template<typename _Tp> _Tp& [01;36m[Kat[m[K(int i0=0);
+      |                                 [01;36m[K^~[m[K
+[01m[K/usr/include/opencv4/opencv2/core/mat.hpp:1911:33:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/lattinone/catkin_ws/simple_planner_ws/src/simple_planner/src/main_node.cpp:21:46:[m[K [01;36m[Knote: [m[K  couldn’t deduce template parameter ‘[01m[K_Tp[m[K’
+   21 |             cout << image.at(cv::Point2d(i,j)[01;36m[K)[m[K;
+      |                                              [01;36m[K^[m[K
+In file included from [01m[K/usr/include/opencv4/opencv2/core.hpp:59[m[K,
+                 from [01m[K/usr/include/opencv4/opencv2/opencv.hpp:52[m[K,
+                 from [01m[K/home/lattinone/catkin_ws/simple_planner_ws/src/simple_planner/src/main_node.cpp:2[m[K:
+[01m[K/usr/include/opencv4/opencv2/core/mat.hpp:1915:39:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp> const _Tp& cv::Mat::at(int) const[m[K’
+ 1915 |     template<typename _Tp> const _Tp& [01;36m[Kat[m[K(int i0=0) const;
+      |                                       [01;36m[K^~[m[K
+[01m[K/usr/include/opencv4/opencv2/core/mat.hpp:1915:39:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/lattinone/catkin_ws/simple_planner_ws/src/simple_planner/src/main_node.cpp:21:46:[m[K [01;36m[Knote: [m[K  couldn’t deduce template parameter ‘[01m[K_Tp[m[K’
+   21 |             cout << image.at(cv::Point2d(i,j)[01;36m[K)[m[K;
+      |                                              [01;36m[K^[m[K
+In file included from [01m[K/usr/include/opencv4/opencv2/core.hpp:59[m[K,
+                 from [01m[K/usr/include/opencv4/opencv2/opencv.hpp:52[m[K,
+                 from [01m[K/home/lattinone/catkin_ws/simple_planner_ws/src/simple_planner/src/main_node.cpp:2[m[K:
+[01m[K/usr/include/opencv4/opencv2/core/mat.hpp:1920:33:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp> _Tp& cv::Mat::at(int, int)[m[K’
+ 1920 |     template<typename _Tp> _Tp& [01;36m[Kat[m[K(int row, int col);
+      |                                 [01;36m[K^~[m[K
+[01m[K/usr/include/opencv4/opencv2/core/mat.hpp:1920:33:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/lattinone/catkin_ws/simple_planner_ws/src/simple_planner/src/main_node.cpp:21:46:[m[K [01;36m[Knote: [m[K  candidate expects 2 arguments, 1 provided
+   21 |             cout << image.at(cv::Point2d(i,j)[01;36m[K)[m[K;
+      |                                              [01;36m[K^[m[K
+In file included from [01m[K/usr/include/opencv4/opencv2/core.hpp:59[m[K,
+                 from [01m[K/usr/include/opencv4/opencv2/opencv.hpp:52[m[K,
+                 from [01m[K/home/lattinone/catkin_ws/simple_planner_ws/src/simple_planner/src/main_node.cpp:2[m[K:
+[01m[K/usr/include/opencv4/opencv2/core/mat.hpp:1925:39:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp> const _Tp& cv::Mat::at(int, int) const[m[K’
+ 1925 |     template<typename _Tp> const _Tp& [01;36m[Kat[m[K(int row, int col) const;
+      |                                       [01;36m[K^~[m[K
+[01m[K/usr/include/opencv4/opencv2/core/mat.hpp:1925:39:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/lattinone/catkin_ws/simple_planner_ws/src/simple_planner/src/main_node.cpp:21:46:[m[K [01;36m[Knote: [m[K  candidate expects 2 arguments, 1 provided
+   21 |             cout << image.at(cv::Point2d(i,j)[01;36m[K)[m[K;
+      |                                              [01;36m[K^[m[K
+In file included from [01m[K/usr/include/opencv4/opencv2/core.hpp:59[m[K,
+                 from [01m[K/usr/include/opencv4/opencv2/opencv.hpp:52[m[K,
+                 from [01m[K/home/lattinone/catkin_ws/simple_planner_ws/src/simple_planner/src/main_node.cpp:2[m[K:
+[01m[K/usr/include/opencv4/opencv2/core/mat.hpp:1932:33:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp> _Tp& cv::Mat::at(int, int, int)[m[K’
+ 1932 |     template<typename _Tp> _Tp& [01;36m[Kat[m[K(int i0, int i1, int i2);
+      |                                 [01;36m[K^~[m[K
+[01m[K/usr/include/opencv4/opencv2/core/mat.hpp:1932:33:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/lattinone/catkin_ws/simple_planner_ws/src/simple_planner/src/main_node.cpp:21:46:[m[K [01;36m[Knote: [m[K  candidate expects 3 arguments, 1 provided
+   21 |             cout << image.at(cv::Point2d(i,j)[01;36m[K)[m[K;
+      |                                              [01;36m[K^[m[K
+In file included from [01m[K/usr/include/opencv4/opencv2/core.hpp:59[m[K,
+                 from [01m[K/usr/include/opencv4/opencv2/opencv.hpp:52[m[K,
+                 from [01m[K/home/lattinone/catkin_ws/simple_planner_ws/src/simple_planner/src/main_node.cpp:2[m[K:
+[01m[K/usr/include/opencv4/opencv2/core/mat.hpp:1938:39:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp> const _Tp& cv::Mat::at(int, int, int) const[m[K’
+ 1938 |     template<typename _Tp> const _Tp& [01;36m[Kat[m[K(int i0, int i1, int i2) const;
+      |                                       [01;36m[K^~[m[K
+[01m[K/usr/include/opencv4/opencv2/core/mat.hpp:1938:39:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/lattinone/catkin_ws/simple_planner_ws/src/simple_planner/src/main_node.cpp:21:46:[m[K [01;36m[Knote: [m[K  candidate expects 3 arguments, 1 provided
+   21 |             cout << image.at(cv::Point2d(i,j)[01;36m[K)[m[K;
+      |                                              [01;36m[K^[m[K
+In file included from [01m[K/usr/include/opencv4/opencv2/core.hpp:59[m[K,
+                 from [01m[K/usr/include/opencv4/opencv2/opencv.hpp:52[m[K,
+                 from [01m[K/home/lattinone/catkin_ws/simple_planner_ws/src/simple_planner/src/main_node.cpp:2[m[K:
+[01m[K/usr/include/opencv4/opencv2/core/mat.hpp:1943:33:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp> _Tp& cv::Mat::at(const int*)[m[K’
+ 1943 |     template<typename _Tp> _Tp& [01;36m[Kat[m[K(const int* idx);
+      |                                 [01;36m[K^~[m[K
+[01m[K/usr/include/opencv4/opencv2/core/mat.hpp:1943:33:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/lattinone/catkin_ws/simple_planner_ws/src/simple_planner/src/main_node.cpp:21:46:[m[K [01;36m[Knote: [m[K  couldn’t deduce template parameter ‘[01m[K_Tp[m[K’
+   21 |             cout << image.at(cv::Point2d(i,j)[01;36m[K)[m[K;
+      |                                              [01;36m[K^[m[K
+In file included from [01m[K/usr/include/opencv4/opencv2/core.hpp:59[m[K,
+                 from [01m[K/usr/include/opencv4/opencv2/opencv.hpp:52[m[K,
+                 from [01m[K/home/lattinone/catkin_ws/simple_planner_ws/src/simple_planner/src/main_node.cpp:2[m[K:
+[01m[K/usr/include/opencv4/opencv2/core/mat.hpp:1947:39:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp> const _Tp& cv::Mat::at(const int*) const[m[K’
+ 1947 |     template<typename _Tp> const _Tp& [01;36m[Kat[m[K(const int* idx) const;
+      |                                       [01;36m[K^~[m[K
+[01m[K/usr/include/opencv4/opencv2/core/mat.hpp:1947:39:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/lattinone/catkin_ws/simple_planner_ws/src/simple_planner/src/main_node.cpp:21:46:[m[K [01;36m[Knote: [m[K  couldn’t deduce template parameter ‘[01m[K_Tp[m[K’
+   21 |             cout << image.at(cv::Point2d(i,j)[01;36m[K)[m[K;
+      |                                              [01;36m[K^[m[K
+In file included from [01m[K/usr/include/opencv4/opencv2/core.hpp:59[m[K,
+                 from [01m[K/usr/include/opencv4/opencv2/opencv.hpp:52[m[K,
+                 from [01m[K/home/lattinone/catkin_ws/simple_planner_ws/src/simple_planner/src/main_node.cpp:2[m[K:
+[01m[K/usr/include/opencv4/opencv2/core/mat.hpp:1950:40:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp, int n> _Tp& cv::Mat::at(const cv::Vec<int, n>&)[m[K’
+ 1950 |     template<typename _Tp, int n> _Tp& [01;36m[Kat[m[K(const Vec<int, n>& idx);
+      |                                        [01;36m[K^~[m[K
+[01m[K/usr/include/opencv4/opencv2/core/mat.hpp:1950:40:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/lattinone/catkin_ws/simple_planner_ws/src/simple_planner/src/main_node.cpp:21:46:[m[K [01;36m[Knote: [m[K  ‘[01m[Kcv::Point2d[m[K’ {aka ‘[01m[Kcv::Point_<double>[m[K’} is not derived from ‘[01m[Kconst cv::Vec<int, n>[m[K’
+   21 |             cout << image.at(cv::Point2d(i,j)[01;36m[K)[m[K;
+      |                                              [01;36m[K^[m[K
+In file included from [01m[K/usr/include/opencv4/opencv2/core.hpp:59[m[K,
+                 from [01m[K/usr/include/opencv4/opencv2/opencv.hpp:52[m[K,
+                 from [01m[K/home/lattinone/catkin_ws/simple_planner_ws/src/simple_planner/src/main_node.cpp:2[m[K:
+[01m[K/usr/include/opencv4/opencv2/core/mat.hpp:1952:46:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp, int n> const _Tp& cv::Mat::at(const cv::Vec<int, n>&) const[m[K’
+ 1952 |     template<typename _Tp, int n> const _Tp& [01;36m[Kat[m[K(const Vec<int, n>& idx) const;
+      |                                              [01;36m[K^~[m[K
+[01m[K/usr/include/opencv4/opencv2/core/mat.hpp:1952:46:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/lattinone/catkin_ws/simple_planner_ws/src/simple_planner/src/main_node.cpp:21:46:[m[K [01;36m[Knote: [m[K  ‘[01m[Kcv::Point2d[m[K’ {aka ‘[01m[Kcv::Point_<double>[m[K’} is not derived from ‘[01m[Kconst cv::Vec<int, n>[m[K’
+   21 |             cout << image.at(cv::Point2d(i,j)[01;36m[K)[m[K;
+      |                                              [01;36m[K^[m[K
+In file included from [01m[K/usr/include/opencv4/opencv2/core.hpp:59[m[K,
+                 from [01m[K/usr/include/opencv4/opencv2/opencv.hpp:52[m[K,
+                 from [01m[K/home/lattinone/catkin_ws/simple_planner_ws/src/simple_planner/src/main_node.cpp:2[m[K:
+[01m[K/usr/include/opencv4/opencv2/core/mat.hpp:1958:33:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp> _Tp& cv::Mat::at(cv::Point)[m[K’
+ 1958 |     template<typename _Tp> _Tp& [01;36m[Kat[m[K(Point pt);
+      |                                 [01;36m[K^~[m[K
+[01m[K/usr/include/opencv4/opencv2/core/mat.hpp:1958:33:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/lattinone/catkin_ws/simple_planner_ws/src/simple_planner/src/main_node.cpp:21:46:[m[K [01;36m[Knote: [m[K  couldn’t deduce template parameter ‘[01m[K_Tp[m[K’
+   21 |             cout << image.at(cv::Point2d(i,j)[01;36m[K)[m[K;
+      |                                              [01;36m[K^[m[K
+In file included from [01m[K/usr/include/opencv4/opencv2/core.hpp:59[m[K,
+                 from [01m[K/usr/include/opencv4/opencv2/opencv.hpp:52[m[K,
+                 from [01m[K/home/lattinone/catkin_ws/simple_planner_ws/src/simple_planner/src/main_node.cpp:2[m[K:
+[01m[K/usr/include/opencv4/opencv2/core/mat.hpp:1963:39:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp> const _Tp& cv::Mat::at(cv::Point) const[m[K’
+ 1963 |     template<typename _Tp> const _Tp& [01;36m[Kat[m[K(Point pt) const;
+      |                                       [01;36m[K^~[m[K
+[01m[K/usr/include/opencv4/opencv2/core/mat.hpp:1963:39:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/lattinone/catkin_ws/simple_planner_ws/src/simple_planner/src/main_node.cpp:21:46:[m[K [01;36m[Knote: [m[K  couldn’t deduce template parameter ‘[01m[K_Tp[m[K’
+   21 |             cout << image.at(cv::Point2d(i,j)[01;36m[K)[m[K;
+      |                                              [01;36m[K^[m[K
+make[2]: *** [CMakeFiles/renderer_node.dir/build.make:63: CMakeFiles/renderer_node.dir/src/main_node.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:1221: CMakeFiles/renderer_node.dir/all] Error 2
+make[1]: *** Waiting for unfinished jobs....
+make[2]: *** [CMakeFiles/planner_node.dir/build.make:63: CMakeFiles/planner_node.dir/src/main_node.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:1707: CMakeFiles/planner_node.dir/all] Error 2
+make[2]: *** [CMakeFiles/main_node.dir/build.make:63: CMakeFiles/main_node.dir/src/main_node.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:1383: CMakeFiles/main_node.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

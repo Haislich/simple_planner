@@ -1,3 +1,16 @@
 {
-    "cmake.sourceDirectory": "/home/lattinone/catkin_ws/simple_planner_ws/build/catkin_tools_prebuild"
+    "cmake.sourceDirectory": "/home/lattinone/catkin_ws/simple_planner_ws/build/catkin_tools_prebuild",
+    "python.autoComplete.extraPaths": [
+        "/opt/ros/noetic/lib/python3/dist-packages"
+    ],
+    "python.analysis.extraPaths": [
+        "/opt/ros/noetic/lib/python3/dist-packages"
+    ],
+    "files.associations": {
+        "*.rs": "rust",
+        "*.md": "markdown",
+        "LICENSE": "plaintext",
+        "iostream": "cpp",
+        "ostream": "cpp"
+    }
 }

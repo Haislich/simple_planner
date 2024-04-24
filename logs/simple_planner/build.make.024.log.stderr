@@ -1,0 +1,56 @@
+[01m[K/home/lattinone/catkin_ws/simple_planner_ws/src/simple_planner/src/main_node.cpp:[m[K In function ‘[01m[Kint main()[m[K’:
+[01m[K/home/lattinone/catkin_ws/simple_planner_ws/src/simple_planner/src/main_node.cpp:7:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kros[m[K’ has not been declared
+    7 |     [01;31m[Kros[m[K:: init(argc, argv, "simple_planner_main_node");
+      |     [01;31m[K^~~[m[K
+[01m[K/home/lattinone/catkin_ws/simple_planner_ws/src/simple_planner/src/main_node.cpp:7:16:[m[K [01;31m[Kerror: [m[K‘[01m[Kargc[m[K’ was not declared in this scope
+    7 |     ros:: init([01;31m[Kargc[m[K, argv, "simple_planner_main_node");
+      |                [01;31m[K^~~~[m[K
+[01m[K/home/lattinone/catkin_ws/simple_planner_ws/src/simple_planner/src/main_node.cpp:7:22:[m[K [01;31m[Kerror: [m[K‘[01m[Kargv[m[K’ was not declared in this scope
+    7 |     ros:: init(argc, [01;31m[Kargv[m[K, "simple_planner_main_node");
+      |                      [01;31m[K^~~~[m[K
+[01m[K/home/lattinone/catkin_ws/simple_planner_ws/src/simple_planner/src/main_node.cpp:8:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kros[m[K’ has not been declared
+    8 |     [01;31m[Kros[m[K::NodeHandle n;
+      |     [01;31m[K^~~[m[K
+[01m[K/home/lattinone/catkin_ws/simple_planner_ws/src/simple_planner/src/main_node.cpp:[m[K In function ‘[01m[Kint main()[m[K’:
+[01m[K/home/lattinone/catkin_ws/simple_planner_ws/src/simple_planner/src/main_node.cpp:7:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kros[m[K’ has not been declared
+    7 |     [01;31m[Kros[m[K:: init(argc, argv, "simple_planner_main_node");
+      |     [01;31m[K^~~[m[K
+[01m[K/home/lattinone/catkin_ws/simple_planner_ws/src/simple_planner/src/main_node.cpp:9:5:[m[K [01;31m[Kerror: [m[K‘[01m[KROS_INFO[m[K’ was not declared in this scope
+    9 |     [01;31m[KROS_INFO[m[K("Main node started");
+      |     [01;31m[K^~~~~~~~[m[K
+[01m[K/home/lattinone/catkin_ws/simple_planner_ws/src/simple_planner/src/main_node.cpp:7:16:[m[K [01;31m[Kerror: [m[K‘[01m[Kargc[m[K’ was not declared in this scope
+    7 |     ros:: init([01;31m[Kargc[m[K, argv, "simple_planner_main_node");
+      |                [01;31m[K^~~~[m[K
+[01m[K/home/lattinone/catkin_ws/simple_planner_ws/src/simple_planner/src/main_node.cpp:7:22:[m[K [01;31m[Kerror: [m[K‘[01m[Kargv[m[K’ was not declared in this scope
+    7 |     ros:: init(argc, [01;31m[Kargv[m[K, "simple_planner_main_node");
+      |                      [01;31m[K^~~~[m[K
+[01m[K/home/lattinone/catkin_ws/simple_planner_ws/src/simple_planner/src/main_node.cpp:8:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kros[m[K’ has not been declared
+    8 |     [01;31m[Kros[m[K::NodeHandle n;
+      |     [01;31m[K^~~[m[K
+[01m[K/home/lattinone/catkin_ws/simple_planner_ws/src/simple_planner/src/main_node.cpp:9:5:[m[K [01;31m[Kerror: [m[K‘[01m[KROS_INFO[m[K’ was not declared in this scope
+    9 |     [01;31m[KROS_INFO[m[K("Main node started");
+      |     [01;31m[K^~~~~~~~[m[K
+[01m[K/home/lattinone/catkin_ws/simple_planner_ws/src/simple_planner/src/main_node.cpp:[m[K In function ‘[01m[Kint main()[m[K’:
+[01m[K/home/lattinone/catkin_ws/simple_planner_ws/src/simple_planner/src/main_node.cpp:7:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kros[m[K’ has not been declared
+    7 |     [01;31m[Kros[m[K:: init(argc, argv, "simple_planner_main_node");
+      |     [01;31m[K^~~[m[K
+[01m[K/home/lattinone/catkin_ws/simple_planner_ws/src/simple_planner/src/main_node.cpp:7:16:[m[K [01;31m[Kerror: [m[K‘[01m[Kargc[m[K’ was not declared in this scope
+    7 |     ros:: init([01;31m[Kargc[m[K, argv, "simple_planner_main_node");
+      |                [01;31m[K^~~~[m[K
+[01m[K/home/lattinone/catkin_ws/simple_planner_ws/src/simple_planner/src/main_node.cpp:7:22:[m[K [01;31m[Kerror: [m[K‘[01m[Kargv[m[K’ was not declared in this scope
+    7 |     ros:: init(argc, [01;31m[Kargv[m[K, "simple_planner_main_node");
+      |                      [01;31m[K^~~~[m[K
+[01m[K/home/lattinone/catkin_ws/simple_planner_ws/src/simple_planner/src/main_node.cpp:8:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kros[m[K’ has not been declared
+    8 |     [01;31m[Kros[m[K::NodeHandle n;
+      |     [01;31m[K^~~[m[K
+[01m[K/home/lattinone/catkin_ws/simple_planner_ws/src/simple_planner/src/main_node.cpp:9:5:[m[K [01;31m[Kerror: [m[K‘[01m[KROS_INFO[m[K’ was not declared in this scope
+    9 |     [01;31m[KROS_INFO[m[K("Main node started");
+      |     [01;31m[K^~~~~~~~[m[K
+make[2]: *** [CMakeFiles/renderer_node.dir/build.make:63: CMakeFiles/renderer_node.dir/src/main_node.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:763: CMakeFiles/renderer_node.dir/all] Error 2
+make[1]: *** Waiting for unfinished jobs....
+make[2]: *** [CMakeFiles/planner_node.dir/build.make:63: CMakeFiles/planner_node.dir/src/main_node.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:169: CMakeFiles/planner_node.dir/all] Error 2
+make[2]: *** [CMakeFiles/main_node.dir/build.make:63: CMakeFiles/main_node.dir/src/main_node.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:709: CMakeFiles/main_node.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

@@ -1,0 +1,12 @@
+<launch>
+    <!-- Start map_server -->
+    <node name="map_server" pkg="map_server" type="map_server"
+        args="/home/lattinone/catkin_ws/simple_planner_ws/maps/map1.yaml" />
+
+    <!-- Start RViz -->
+    <node name="rviz" pkg="rviz" type="rviz"
+        args="-d /home/lattinone/catkin_ws/simple_planner_ws/maps/map1.rviz" />
+
+    <node name="main_node" pkg="simple_planner" type="main_node" />
+
+</launch>

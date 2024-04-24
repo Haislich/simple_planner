@@ -1,0 +1,59 @@
+[01m[K/home/lattinone/catkin_ws/simple_planner_ws/src/simple_planner/src/main_node.cpp:4:24:[m[K [01;31m[Kerror: [m[K‘[01m[Knav_msgs[m[K’ does not name a type
+    4 | void mapCallback(const [01;31m[Knav_msgs[m[K::OccupancyGrid& msg){
+      |                        [01;31m[K^~~~~~~~[m[K
+[01m[K/home/lattinone/catkin_ws/simple_planner_ws/src/simple_planner/src/main_node.cpp:4:47:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[K&[m[K’ token
+    4 | void mapCallback(const nav_msgs::OccupancyGrid[01;31m[K&[m[K msg){
+      |                                               [01;31m[K^[m[K
+[01m[K/home/lattinone/catkin_ws/simple_planner_ws/src/simple_planner/src/main_node.cpp:4:47:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[K&[m[K’ token
+    4 | void mapCallback[34m[K([m[Kconst nav_msgs::OccupancyGrid[01;31m[K&[m[K msg){
+      |                 [34m[K~[m[K                             [01;31m[K^[m[K
+      |                                               [32m[K)[m[K
+[01m[K/home/lattinone/catkin_ws/simple_planner_ws/src/simple_planner/src/main_node.cpp:4:49:[m[K [01;31m[Kerror: [m[Kexpected initializer before ‘[01m[Kmsg[m[K’
+    4 | void mapCallback(const nav_msgs::OccupancyGrid& [01;31m[Kmsg[m[K){
+      |                                                 [01;31m[K^~~[m[K
+[01m[K/home/lattinone/catkin_ws/simple_planner_ws/src/simple_planner/src/main_node.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/lattinone/catkin_ws/simple_planner_ws/src/simple_planner/src/main_node.cpp:14:52:[m[K [01;31m[Kerror: [m[K‘[01m[KmapCallback[m[K’ was not declared in this scope
+   14 |     ros::Subscriber sub = n.subscribe("map", 1000, [01;31m[KmapCallback[m[K);
+      |                                                    [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/lattinone/catkin_ws/simple_planner_ws/src/simple_planner/src/main_node.cpp:4:24:[m[K [01;31m[Kerror: [m[K‘[01m[Knav_msgs[m[K’ does not name a type
+    4 | void mapCallback(const [01;31m[Knav_msgs[m[K::OccupancyGrid& msg){
+      |                        [01;31m[K^~~~~~~~[m[K
+[01m[K/home/lattinone/catkin_ws/simple_planner_ws/src/simple_planner/src/main_node.cpp:4:47:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[K&[m[K’ token
+    4 | void mapCallback(const nav_msgs::OccupancyGrid[01;31m[K&[m[K msg){
+      |                                               [01;31m[K^[m[K
+[01m[K/home/lattinone/catkin_ws/simple_planner_ws/src/simple_planner/src/main_node.cpp:4:47:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[K&[m[K’ token
+    4 | void mapCallback[34m[K([m[Kconst nav_msgs::OccupancyGrid[01;31m[K&[m[K msg){
+      |                 [34m[K~[m[K                             [01;31m[K^[m[K
+      |                                               [32m[K)[m[K
+[01m[K/home/lattinone/catkin_ws/simple_planner_ws/src/simple_planner/src/main_node.cpp:4:49:[m[K [01;31m[Kerror: [m[Kexpected initializer before ‘[01m[Kmsg[m[K’
+    4 | void mapCallback(const nav_msgs::OccupancyGrid& [01;31m[Kmsg[m[K){
+      |                                                 [01;31m[K^~~[m[K
+[01m[K/home/lattinone/catkin_ws/simple_planner_ws/src/simple_planner/src/main_node.cpp:4:24:[m[K [01;31m[Kerror: [m[K‘[01m[Knav_msgs[m[K’ does not name a type
+    4 | void mapCallback(const [01;31m[Knav_msgs[m[K::OccupancyGrid& msg){
+      |                        [01;31m[K^~~~~~~~[m[K
+[01m[K/home/lattinone/catkin_ws/simple_planner_ws/src/simple_planner/src/main_node.cpp:4:47:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[K&[m[K’ token
+    4 | void mapCallback(const nav_msgs::OccupancyGrid[01;31m[K&[m[K msg){
+      |                                               [01;31m[K^[m[K
+[01m[K/home/lattinone/catkin_ws/simple_planner_ws/src/simple_planner/src/main_node.cpp:4:47:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[K&[m[K’ token
+    4 | void mapCallback[34m[K([m[Kconst nav_msgs::OccupancyGrid[01;31m[K&[m[K msg){
+      |                 [34m[K~[m[K                             [01;31m[K^[m[K
+      |                                               [32m[K)[m[K
+[01m[K/home/lattinone/catkin_ws/simple_planner_ws/src/simple_planner/src/main_node.cpp:4:49:[m[K [01;31m[Kerror: [m[Kexpected initializer before ‘[01m[Kmsg[m[K’
+    4 | void mapCallback(const nav_msgs::OccupancyGrid& [01;31m[Kmsg[m[K){
+      |                                                 [01;31m[K^~~[m[K
+[01m[K/home/lattinone/catkin_ws/simple_planner_ws/src/simple_planner/src/main_node.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/lattinone/catkin_ws/simple_planner_ws/src/simple_planner/src/main_node.cpp:14:52:[m[K [01;31m[Kerror: [m[K‘[01m[KmapCallback[m[K’ was not declared in this scope
+   14 |     ros::Subscriber sub = n.subscribe("map", 1000, [01;31m[KmapCallback[m[K);
+      |                                                    [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/lattinone/catkin_ws/simple_planner_ws/src/simple_planner/src/main_node.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/lattinone/catkin_ws/simple_planner_ws/src/simple_planner/src/main_node.cpp:14:52:[m[K [01;31m[Kerror: [m[K‘[01m[KmapCallback[m[K’ was not declared in this scope
+   14 |     ros::Subscriber sub = n.subscribe("map", 1000, [01;31m[KmapCallback[m[K);
+      |                                                    [01;31m[K^~~~~~~~~~~[m[K
+make[2]: *** [CMakeFiles/renderer_node.dir/build.make:63: CMakeFiles/renderer_node.dir/src/main_node.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:1221: CMakeFiles/renderer_node.dir/all] Error 2
+make[1]: *** Waiting for unfinished jobs....
+make[2]: *** [CMakeFiles/main_node.dir/build.make:63: CMakeFiles/main_node.dir/src/main_node.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:1383: CMakeFiles/main_node.dir/all] Error 2
+make[2]: *** [CMakeFiles/planner_node.dir/build.make:63: CMakeFiles/planner_node.dir/src/main_node.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:1707: CMakeFiles/planner_node.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

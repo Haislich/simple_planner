@@ -1,87 +1,77 @@
+#include <ros/ros.h>
 #include <opencv2/opencv.hpp>
+#include <visualization_msgs/Marker.h>
+#include <nav_msgs/OccupancyGrid.h> 
+#include <geometry_msgs/PoseStamped.h>
+#include <geometry_msgs/PoseWithCovarianceStamped.h>
 #include <iostream>
+#include <vector>
 
 using namespace std;
-int main()
-{
-    // File path of the image
-    std::string imagePath = "/home/lattinone/catkin_ws/simple_planner_ws/maps/map1.pgm";
-
-    // Read the image from file path
-    cv::Mat image = cv::imread(imagePath, cv::IMREAD_COLOR);
-
-    // Check if the image was loaded successfully
-    if (image.empty())
-    {
-        std::cerr << "Failed to load image from path: " << imagePath << std::endl;
-        return -1;
-    }
-    int finalWidth = 400;
-    int finalHeight = 400;
-    cv::Mat resizedImage;
-    cv::resize(image, resizedImage, cv::Size(finalWidth, finalHeight), 0, 0, cv::INTER_NEAREST);
-     
-    // Create a copy of the original image for manipulation
-    image = resizedImage.clone();
-    // Determine the size of the image
-    cv::Size imageSize = image.size();
-    int width = imageSize.width;
-    int height = imageSize.height;
-
-    // Define the height of the text area
-    int textAreaHeight = 100;
-
-    // Create a larger Mat (canvas) that includes space for the image and text area
-    cv::Mat canvas = cv::Mat::zeros(height + textAreaHeight, width, image.type());
-
-    // Copy the image onto the canvas
-    image.copyTo(canvas(cv::Rect(0, 0, width, height)));
-
-    // Define the position for the text, just below the image
-    //cv::Point textPosition(10, height + 20); // Adjust the (x, y) coordinates as needed
-
-    // Draw text options on the canvas just below the image
-    cv::putText(canvas, "Press 'q' to quit", cv::Point(10, height + 20), cv::FONT_HERSHEY_SIMPLEX, 0.5, cv::Scalar(255, 255, 255), 1);
-    cv::putText(canvas, "Press 'n' to move to the next planned point", cv::Point(10, height + 40), cv::FONT_HERSHEY_SIMPLEX, 0.5, cv::Scalar(255, 255, 255), 1);
-    cv::putText(canvas, "Press 'r' to restart", cv::Point(20, height + 60), cv::FONT_HERSHEY_SIMPLEX, 0.5, cv::Scalar(255, 255, 255), 1);
 
 
-    // Display the canvas (image and text area) in a window
-    cv::imshow("Interactive Image", canvas);
-
-    // Interactive loop to handle user input
-    while (true) {
-        // Wait for a key press
-        int key = cv::waitKey(0);
-
-        // Check the key and perform the corresponding action
-        if (key == 'q' || key == 'Q') {
-            // Quit the program if 'q' or 'Q' is pressed
-            break;
-        } else if (key == 'r' || key == 'R') {
-            // Rotate the image clockwise if 'r' or 'R' is pressed
-            cv::Mat rotatedImage;
-            cv::rotate(image, rotatedImage, cv::ROTATE_90_CLOCKWISE);
-
-            // Update the image with the rotated version
-            image = rotatedImage.clone();
-
-            // Create a new canvas with the rotated image and text options
-            canvas = cv::Mat::zeros(height + textAreaHeight, width, image.type());
-            image.copyTo(canvas(cv::Rect(0, 0, width, height)));
-
-            // Redraw the text options on the new canvas
-            cv::putText(canvas, "Press 'q' to quit", cv::Point(10, height + 20), cv::FONT_HERSHEY_SIMPLEX, 0.5, cv::Scalar(0, 255, 0), 1);
-            cv::putText(canvas, "Press 'r' to rotate clockwise", cv::Point(10, height + 40), cv::FONT_HERSHEY_SIMPLEX, 0.5, cv::Scalar(0, 255, 0), 1);
-
-            // Redisplay the updated canvas (image and text area)
-            cv::imshow("Interactive Image", canvas);
+// void initialPoseCallback(const geometry_msgs::PoseWithCovarianceStamped::ConstPtr& msg){}
+// void goalPoseCallback(const geometry_msgs::PoseStamped::ConstPtr& msg){}
+void mapCallBack(const nav_msgs::OccupancyGrid::ConstPtr& msg){
+    int h = msg->info.height;
+    int w = msg->info.width;
+    // For absolutely no reason
+    // a matrix like this:
+    // 1 2 3
+    // 4 5 6 
+    // Is converted into this vector
+    // 4 5 6 1 2 3  
+    for(int i =(h-1); i >=0 ;i--){ //Start from the last 
+        for(int j  = 0; j < w; j++){
+            int idx = (i*w) + j;
+            if (msg->data[idx] == 100){
+                cout << "0 " ;
+            }
+            else if ((msg->data[idx]) == 0)
+            {
+                cout << "2 " ;
+               
+            }
+            else {
+               cout << "1 ";
+            }
+            
         }
+        cout << endl;
     }
+};
+int main( int argc, char** argv ){
+    ros::init(argc, argv, "simple_planner_main_node");
+    // cv::Mat image = cv::imread("/home/lattinone/catkin_ws/simple_planner_ws/maps/map1.pgm",cv::IMREAD_GRAYSCALE);
+    // for(int i = 0; i < image.cols; i ++){
+    //     for (int j =0; j< image.rows;j++){
+    //         cout << static_cast<int>(image.at<uint8_t>(i,j)) << " ";
+    //     }
+    //     cout << endl;
+    // }
+    // cv::Mat resized;
+    // cv::resize(image,resized,cv::Size2d(400,400),0,0,cv::InterpolationFlags::INTER_NEAREST);
+    // cv::imshow("Culo",resized);
+    // cv::waitKey(0);
+    ros::NodeHandle n;
+    ros::Subscriber sub2 = n.subscribe("map", 1000, mapCallBack);
 
-    // Clean up and close the window
-    cv::destroyAllWindows();
+    // ros::Subscriber sub2 = n.subscribe("initialpose", 1000, &initialPoseCallback);
+    // ros::Subscriber sub3 = n.subscribe("move_base_simple/goal", 1000, &goalPoseCallback);
+    while(ros::ok()){
+        ros::spinOnce();
+    }
+    // while (marker_pub.getNumSubscribers() < 1)
+    // {
+    //   if (!ros::ok())
+    //   {
+    //     return 0;
+    //   }
+    //   ROS_WARN_ONCE("Please create a subscriber to the marker");
+    //   sleep(1);
+    // }
 
-    return 0;
+    
+  
 }
 

@@ -8,8 +8,13 @@ project(simple_planner)
 ## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
 ## is used, also find other catkin packages
 find_package(catkin REQUIRED COMPONENTS
-  cv_bridge
+  nav_msgs
+  geometry_msgs
   roscpp
+  sensor_msgs
+  std_msgs
+  tf
+  cv_bridge
 )
 
 ## System dependencies are found with CMake's conventions
