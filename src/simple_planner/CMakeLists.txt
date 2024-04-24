@@ -8,9 +8,10 @@ project(simple_planner)
 ## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
 ## is used, also find other catkin packages
 find_package(catkin REQUIRED COMPONENTS
-    roscpp
-    sensor_msgs
+  cv_bridge
+  roscpp
 )
+
 ## System dependencies are found with CMake's conventions
 # find_package(Boost REQUIRED COMPONENTS system)
 
@@ -103,7 +104,7 @@ find_package(catkin REQUIRED COMPONENTS
 catkin_package(
 #  INCLUDE_DIRS include
 #  LIBRARIES simple_planner
-#  CATKIN_DEPENDS other_catkin_pkg
+#  CATKIN_DEPENDS cv_bridge roscpp
 #  DEPENDS system_lib
 )
 
@@ -115,7 +116,7 @@ catkin_package(
 ## Your package locations should be listed before other locations
 include_directories(
 # include
-${catkin_INCLUDE_DIRS}
+  ${catkin_INCLUDE_DIRS}
 )
 
 ## Declare a C++ library
@@ -131,7 +132,10 @@ ${catkin_INCLUDE_DIRS}
 ## Declare a C++ executable
 ## With catkin_make all packages are built within a single CMake context
 ## The recommended prefix ensures that target names across packages don't collide
-add_executable(${PROJECT_NAME}_node src/simple_planner_node.cpp)
+add_executable(main_node src/main_node.cpp)
+add_executable(renderer_node src/main_node.cpp)
+add_executable(planner_node src/main_node.cpp)
+
 
 ## Rename C++ executable without prefix
 ## The above recommended prefix causes long target names, the following renames the
@@ -144,9 +148,17 @@ add_executable(${PROJECT_NAME}_node src/simple_planner_node.cpp)
 # add_dependencies(${PROJECT_NAME}_node ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 
 ## Specify libraries to link a library or executable target against
-target_link_libraries(${PROJECT_NAME}_node
+target_link_libraries(main_node
   ${catkin_LIBRARIES}
 )
+target_link_libraries(renderer_node
+  ${catkin_LIBRARIES}
+)
+target_link_libraries(planner_node
+  ${catkin_LIBRARIES}
+)
+
+
 
 #############
 ## Install ##

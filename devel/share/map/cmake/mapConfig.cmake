@@ -1,0 +1,1 @@
+/home/lattinone/catkin_ws/simple_planner_ws/devel/.private/map/share/map/cmake/mapConfig.cmake

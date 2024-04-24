@@ -1,0 +1,31 @@
+[35m[1mScanning dependencies of target drawer_node[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/drawer_node.dir/src/drawer_node.cpp.o[0m
+[01m[K/home/lattinone/catkin_ws/simple_planner_ws/src/drawer/src/drawer_node.cpp:5:35:[m[K [01;31m[Kerror: [m[K‘[01m[KEigen[m[K’ does not name a type
+    5 | void drawLine(Canvas& dest, const [01;31m[KEigen[m[K::Vector2f& p0, const Eigen::Vector2f& p1, uint8_t color) {
+      |                                   [01;31m[K^~~~~[m[K
+[01m[K/home/lattinone/catkin_ws/simple_planner_ws/src/drawer/src/drawer_node.cpp:5:50:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[K&[m[K’ token
+    5 | void drawLine(Canvas& dest, const Eigen::Vector2f[01;31m[K&[m[K p0, const Eigen::Vector2f& p1, uint8_t color) {
+      |                                                  [01;31m[K^[m[K
+[01m[K/home/lattinone/catkin_ws/simple_planner_ws/src/drawer/src/drawer_node.cpp:5:50:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[K&[m[K’ token
+    5 | void drawLine[34m[K([m[KCanvas& dest, const Eigen::Vector2f[01;31m[K&[m[K p0, const Eigen::Vector2f& p1, uint8_t color) {
+      |              [34m[K~[m[K                                   [01;31m[K^[m[K
+      |                                                  [32m[K)[m[K
+[01m[K/home/lattinone/catkin_ws/simple_planner_ws/src/drawer/src/drawer_node.cpp:5:52:[m[K [01;31m[Kerror: [m[Kexpected initializer before ‘[01m[Kp0[m[K’
+    5 | void drawLine(Canvas& dest, const Eigen::Vector2f& [01;31m[Kp0[m[K, const Eigen::Vector2f& p1, uint8_t color) {
+      |                                                    [01;31m[K^~[m[K
+[01m[K/home/lattinone/catkin_ws/simple_planner_ws/src/drawer/src/drawer_node.cpp:10:37:[m[K [01;31m[Kerror: [m[K‘[01m[KEigen[m[K’ does not name a type
+   10 | void drawCircle(Canvas& dest, const [01;31m[KEigen[m[K::Vector2f& center, int radius, uint8_t color) {
+      |                                     [01;31m[K^~~~~[m[K
+[01m[K/home/lattinone/catkin_ws/simple_planner_ws/src/drawer/src/drawer_node.cpp:10:52:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[K&[m[K’ token
+   10 | void drawCircle(Canvas& dest, const Eigen::Vector2f[01;31m[K&[m[K center, int radius, uint8_t color) {
+      |                                                    [01;31m[K^[m[K
+[01m[K/home/lattinone/catkin_ws/simple_planner_ws/src/drawer/src/drawer_node.cpp:10:52:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[K&[m[K’ token
+   10 | void drawCircle[34m[K([m[KCanvas& dest, const Eigen::Vector2f[01;31m[K&[m[K center, int radius, uint8_t color) {
+      |                [34m[K~[m[K                                   [01;31m[K^[m[K
+      |                                                    [32m[K)[m[K
+[01m[K/home/lattinone/catkin_ws/simple_planner_ws/src/drawer/src/drawer_node.cpp:10:54:[m[K [01;31m[Kerror: [m[Kexpected initializer before ‘[01m[Kcenter[m[K’
+   10 | void drawCircle(Canvas& dest, const Eigen::Vector2f& [01;31m[Kcenter[m[K, int radius, uint8_t color) {
+      |                                                      [01;31m[K^~~~~~[m[K
+make[2]: *** [CMakeFiles/drawer_node.dir/build.make:63: CMakeFiles/drawer_node.dir/src/drawer_node.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:165: CMakeFiles/drawer_node.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

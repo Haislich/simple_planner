@@ -1,0 +1,30 @@
+[01m[K/home/lattinone/catkin_ws/simple_planner_ws/src/map/src/map_node.cpp:15:40:[m[K [01;31m[Kerror: [m[K‘[01m[Kgeometry_msgs[m[K’ does not name a type
+   15 |         void initialPoseCallback(const [01;31m[Kgeometry_msgs[m[K::PoseWithCovarianceStamped::ConstPtr& msg){
+      |                                        [01;31m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/lattinone/catkin_ws/simple_planner_ws/src/map/src/map_node.cpp:15:80:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[K::[m[K’ token
+   15 |         void initialPoseCallback(const geometry_msgs::PoseWithCovarianceStamped[01;31m[K::[m[KConstPtr& msg){
+      |                                                                                [01;31m[K^~[m[K
+[01m[K/home/lattinone/catkin_ws/simple_planner_ws/src/map/src/map_node.cpp:15:80:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[K::[m[K’ token
+   15 |         void initialPoseCallback[34m[K([m[Kconst geometry_msgs::PoseWithCovarianceStamped[01;31m[K:[m[K[32m[K:[m[KConstPtr& msg){
+      |                                 [34m[K~[m[K                                              [01;31m[K^[m[K[32m[K~[m[K
+      |                                                                                [32m[K)[m[K
+[01m[K/home/lattinone/catkin_ws/simple_planner_ws/src/map/src/map_node.cpp:15:55:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ at end of member declaration
+   15 |         void initialPoseCallback(const geometry_msgs::[01;31m[KPoseWithCovarianceStamped[m[K::ConstPtr& msg){
+      |                                                       [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+      |                                                                                [32m[K;[m[K
+[01m[K/home/lattinone/catkin_ws/simple_planner_ws/src/map/src/map_node.cpp:15:82:[m[K [01;31m[Kerror: [m[K‘[01m[KConstPtr[m[K’ in namespace ‘[01m[K::[m[K’ does not name a type
+   15 |         void initialPoseCallback(const geometry_msgs::PoseWithCovarianceStamped::[01;31m[KConstPtr[m[K& msg){
+      |                                                                                  [01;31m[K^~~~~~~~[m[K
+[01m[K/home/lattinone/catkin_ws/simple_planner_ws/src/map/src/map_node.cpp:[m[K In constructor ‘[01m[KMap::Map(ros::NodeHandle&)[m[K’:
+[01m[K/home/lattinone/catkin_ws/simple_planner_ws/src/map/src/map_node.cpp:10:13:[m[K [01;31m[Kerror: [m[K‘[01m[Ksub_init[m[K’ was not declared in this scope
+   10 |             [01;31m[Ksub_init[m[K = n.subscribe("map", 1000, &Map::mapCallback, this);
+      |             [01;31m[K^~~~~~~~[m[K
+[01m[K/home/lattinone/catkin_ws/simple_planner_ws/src/map/src/map_node.cpp:10:55:[m[K [01;31m[Kerror: [m[K‘[01m[KmapCallback[m[K’ is not a member of ‘[01m[KMap[m[K’
+   10 |             sub_init = n.subscribe("map", 1000, &Map::[01;31m[KmapCallback[m[K, this);
+      |                                                       [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/lattinone/catkin_ws/simple_planner_ws/src/map/src/map_node.cpp:13:13:[m[K [01;31m[Kerror: [m[K‘[01m[Ks[m[K’ was not declared in this scope
+   13 |             [01;31m[Ks[m[K
+      |             [01;31m[K^[m[K
+make[2]: *** [CMakeFiles/map_node.dir/build.make:63: CMakeFiles/map_node.dir/src/map_node.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:800: CMakeFiles/map_node.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

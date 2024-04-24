@@ -1,0 +1,4 @@
+Symlinking /home/lattinone/catkin_ws/simple_planner_ws/devel/share/map/cmake/mapConfig-version.cmake
+Symlinking /home/lattinone/catkin_ws/simple_planner_ws/devel/share/map/cmake/mapConfig.cmake
+Symlinking /home/lattinone/catkin_ws/simple_planner_ws/devel/lib/map/map_node
+Symlinking /home/lattinone/catkin_ws/simple_planner_ws/devel/lib/pkgconfig/map.pc

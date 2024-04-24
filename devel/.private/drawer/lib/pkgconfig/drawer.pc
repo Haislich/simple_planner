@@ -1,0 +1,8 @@
+prefix=/home/lattinone/catkin_ws/simple_planner_ws/devel/.private/drawer
+
+Name: drawer
+Description: Description of drawer
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

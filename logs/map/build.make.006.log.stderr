@@ -1,0 +1,7 @@
+[01m[K/home/lattinone/catkin_ws/simple_planner_ws/src/map/src/map_node.cpp:11:2:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ after class definition
+   11 | }
+      |  [01;31m[K^[m[K
+      |  [32m[K;[m[K
+make[2]: *** [CMakeFiles/map_node.dir/build.make:63: CMakeFiles/map_node.dir/src/map_node.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:800: CMakeFiles/map_node.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2
