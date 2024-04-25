@@ -1,0 +1,46 @@
+[01m[K/home/lattinone/catkin_ws/simple_planner_ws/src/simple_planner/src/main_node.cpp:12:58:[m[K [01;31m[Kerror: [m[K‘[01m[KNode[m[K’ was not declared in this scope
+   12 | class IterablePriorityQueue : public std::priority_queue<[01;31m[KNode[m[K*, vector<Node*>> {
+      |                                                          [01;31m[K^~~~[m[K
+[01m[K/home/lattinone/catkin_ws/simple_planner_ws/src/simple_planner/src/main_node.cpp:12:72:[m[K [01;31m[Kerror: [m[K‘[01m[KNode[m[K’ was not declared in this scope
+   12 | class IterablePriorityQueue : public std::priority_queue<Node*, vector<[01;31m[KNode[m[K*>> {
+      |                                                                        [01;31m[K^~~~[m[K
+[01m[K/home/lattinone/catkin_ws/simple_planner_ws/src/simple_planner/src/main_node.cpp:12:76:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+   12 | class IterablePriorityQueue : public std::priority_queue<Node*, vector<Node[01;31m[K*[m[K>> {
+      |                                                                            [01;31m[K^[m[K
+[01m[K/home/lattinone/catkin_ws/simple_planner_ws/src/simple_planner/src/main_node.cpp:12:76:[m[K [01;31m[Kerror: [m[Ktemplate argument 2 is invalid
+[01m[K/home/lattinone/catkin_ws/simple_planner_ws/src/simple_planner/src/main_node.cpp:12:77:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+   12 | class IterablePriorityQueue : public std::priority_queue<Node*, vector<Node*[01;31m[K>>[m[K {
+      |                                                                             [01;31m[K^~[m[K
+[01m[K/home/lattinone/catkin_ws/simple_planner_ws/src/simple_planner/src/main_node.cpp:12:77:[m[K [01;31m[Kerror: [m[Ktemplate argument 2 is invalid
+[01m[K/home/lattinone/catkin_ws/simple_planner_ws/src/simple_planner/src/main_node.cpp:12:77:[m[K [01;31m[Kerror: [m[Ktemplate argument 3 is invalid
+[01m[K/home/lattinone/catkin_ws/simple_planner_ws/src/simple_planner/src/main_node.cpp:[m[K In member function ‘[01m[Kauto IterablePriorityQueue::begin() const[m[K’:
+[01m[K/home/lattinone/catkin_ws/simple_planner_ws/src/simple_planner/src/main_node.cpp:16:31:[m[K [01;31m[Kerror: [m[K‘[01m[Kc[m[K’ was not declared in this scope
+   16 |   auto begin() const { return [01;31m[Kc[m[K.begin(); }
+      |                               [01;31m[K^[m[K
+[01m[K/home/lattinone/catkin_ws/simple_planner_ws/src/simple_planner/src/main_node.cpp:[m[K In member function ‘[01m[Kauto IterablePriorityQueue::end() const[m[K’:
+[01m[K/home/lattinone/catkin_ws/simple_planner_ws/src/simple_planner/src/main_node.cpp:17:29:[m[K [01;31m[Kerror: [m[K‘[01m[Kc[m[K’ was not declared in this scope
+   17 |   auto end() const { return [01;31m[Kc[m[K.end(); }
+      |                             [01;31m[K^[m[K
+[01m[K/home/lattinone/catkin_ws/simple_planner_ws/src/simple_planner/src/main_node.cpp:[m[K In member function ‘[01m[Kstd::vector<std::pair<int, int> > Astar::plan(std::pair<int, int>, std::pair<int, int>, const std::vector<std::vector<char> >&)[m[K’:
+[01m[K/home/lattinone/catkin_ws/simple_planner_ws/src/simple_planner/src/main_node.cpp:92:14:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass IterablePriorityQueue[m[K’ has no member named ‘[01m[Kpush[m[K’
+   92 |     frontier.[01;31m[Kpush[m[K(start_node);
+      |              [01;31m[K^~~~[m[K
+[01m[K/home/lattinone/catkin_ws/simple_planner_ws/src/simple_planner/src/main_node.cpp:95:22:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass IterablePriorityQueue[m[K’ has no member named ‘[01m[Kempty[m[K’
+   95 |     while (!frontier.[01;31m[Kempty[m[K()) {
+      |                      [01;31m[K^~~~~[m[K
+[01m[K/home/lattinone/catkin_ws/simple_planner_ws/src/simple_planner/src/main_node.cpp:97:36:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass IterablePriorityQueue[m[K’ has no member named ‘[01m[Ktop[m[K’
+   97 |       Node* currentNode = frontier.[01;31m[Ktop[m[K();
+      |                                    [01;31m[K^~~[m[K
+[01m[K/home/lattinone/catkin_ws/simple_planner_ws/src/simple_planner/src/main_node.cpp:98:16:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass IterablePriorityQueue[m[K’ has no member named ‘[01m[Kpop[m[K’
+   98 |       frontier.[01;31m[Kpop[m[K();
+      |                [01;31m[K^~~[m[K
+[01m[K/home/lattinone/catkin_ws/simple_planner_ws/src/simple_planner/src/main_node.cpp:140:37:[m[K [01;31m[Kerror: [m[K‘[01m[Kvoid __for_begin [m[K’ has incomplete type
+  140 |         for (const auto& openNode : [01;31m[Kfrontier[m[K) {
+      |                                     [01;31m[K^~~~~~~~[m[K
+[01m[K/home/lattinone/catkin_ws/simple_planner_ws/src/simple_planner/src/main_node.cpp:140:37:[m[K [01;31m[Kerror: [m[K‘[01m[Kvoid __for_end [m[K’ has incomplete type
+[01m[K/home/lattinone/catkin_ws/simple_planner_ws/src/simple_planner/src/main_node.cpp:154:20:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass IterablePriorityQueue[m[K’ has no member named ‘[01m[Kpush[m[K’
+  154 |           frontier.[01;31m[Kpush[m[K(neighborNode);
+      |                    [01;31m[K^~~~[m[K
+make[2]: *** [CMakeFiles/main_node.dir/build.make:63: CMakeFiles/main_node.dir/src/main_node.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:1352: CMakeFiles/main_node.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

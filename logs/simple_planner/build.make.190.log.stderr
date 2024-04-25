@@ -1,0 +1,11 @@
+[01m[K/home/lattinone/catkin_ws/simple_planner_ws/src/simple_planner/src/main_node.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/lattinone/catkin_ws/simple_planner_ws/src/simple_planner/src/main_node.cpp:34:20:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ before ‘[01m[K}[m[K’ token
+   34 |           r.sleep()
+      |                    [01;31m[K^[m[K
+      |                    [32m[K;[m[K
+   35 |           // std::cout << path[i].x << path[i].y << std::endl;
+   36 |         [32m[K}[m[K
+      |         [32m[K~[m[K           
+make[2]: *** [CMakeFiles/main_node.dir/build.make:63: CMakeFiles/main_node.dir/src/main_node.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:1352: CMakeFiles/main_node.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

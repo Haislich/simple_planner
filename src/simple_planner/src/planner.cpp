@@ -1,64 +1,67 @@
-// #include "ros/ros.h"
-// #include "geometry_msgs/PoseStamped.h"
-// #include "geometry_msgs/PoseWithCovarianceStamped.h"
-// #include <tf/transform_broadcaster.h>
-// #include <iostream>
- 
-// using namespace std;
- 
-// // Initialize ROS publishers
-// ros::Publisher pub;
-// ros::Publisher pub2;
- 
-// // Take move_base_simple/goal as input and publish goal_2d
-// void handle_goal(const geometry_msgs::PoseStamped &goal) {
-//   geometry_msgs::PoseStamped rpyGoal;
-//   rpyGoal.header.frame_id = "map";
-//   rpyGoal.header.stamp = goal.header.stamp;
-//   rpyGoal.pose.position.x = goal.pose.position.x;
-//   rpyGoal.pose.position.y = goal.pose.position.y;
-//   rpyGoal.pose.position.z = 0;
-//   tf::Quaternion q(0, 0, goal.pose.orientation.z, goal.pose.orientation.w);
-//   tf::Matrix3x3 m(q);
-//   double roll, pitch, yaw;
-//   m.getRPY(roll, pitch, yaw);
-//   rpyGoal.pose.orientation.x = 0;
-//   rpyGoal.pose.orientation.y = 0;
-//   rpyGoal.pose.orientation.z = yaw;
-//   rpyGoal.pose.orientation.w = 0;
-//   pub.publish(rpyGoal);
-// }
- 
-// // Take initialpose as input and publish initial_2d
-// void handle_initial_pose(const geometry_msgs::PoseWithCovarianceStamped &pose) {
-//   geometry_msgs::PoseStamped rpyPose;
-//   rpyPose.header.frame_id = "map";
-//   rpyPose.header.stamp = pose.header.stamp;
-//   rpyPose.pose.position.x = pose.pose.pose.position.x;
-//   rpyPose.pose.position.y = pose.pose.pose.position.y;
-//   rpyPose.pose.position.z = 0;
-//   tf::Quaternion q(0, 0, pose.pose.pose.orientation.z, pose.pose.pose.orientation.w);
-//   tf::Matrix3x3 m(q);
-//   double roll, pitch, yaw;
-//   m.getRPY(roll, pitch, yaw);
-//   rpyPose.pose.orientation.x = 0;
-//   rpyPose.pose.orientation.y = 0;
-//   rpyPose.pose.orientation.z = yaw;
-//   rpyPose.pose.orientation.w = 0;
-//   pub2.publish(rpyPose);
-// }
- 
-// int main(int argc, char **argv) {
-//   ros::init(argc, argv, "rviz_click_to_2d");
-//   ros::NodeHandle node;
-//   pub = node.advertise<geometry_msgs::PoseStamped>("goal_2d", 0);
-//   pub2 = node.advertise<geometry_msgs::PoseStamped>("initial_2d", 0);
-//   ros::Subscriber sub = node.subscribe("move_base_simple/goal", 0, handle_goal);
-//   ros::Subscriber sub2 = node.subscribe("initialpose", 0, handle_initial_pose);
-//   ros::Rate loop_rate(10);
-//   while (ros::ok()) {
-//         ros::spinOnce();
-//         loop_rate.sleep();
-//   }
-//   return 0;
-// }
+#include "planner.h"
+
+/* #region Node Definition */
+Node::Node(const MapCoord &coord, Node *p = nullptr)
+    : MapCoord(coord), parent(p) {}
+
+/* #endregion */
+
+/* #region A* Definition */
+BFS::BFS(Map map) : map(map) {}
+
+std::vector<RvizCoord> BFS::reconstruct_path(Node *goal_node) {
+  std::vector<RvizCoord> path;
+  Node *current_node = goal_node;
+
+  while (current_node != nullptr) {
+    path.push_back(
+        RvizCoord(map.get_height(), current_node->x, current_node->y));
+    current_node = current_node->parent;
+  }
+
+  reverse(path.begin(), path.end());
+  return path;
+}
+
+std::vector<RvizCoord> BFS::plan(MapCoord start) {
+  if (map.get_element_at(start) == MapElement::Goal) {
+    return std::vector<RvizCoord>(
+        1, RvizCoord(map.get_height(), start.x, start.y));
+  }
+  // Frontier is a  fifo queue.
+  std::queue<Node *> frontier;
+  std::vector<std::vector<bool>> visited(
+      map.get_height(), std::vector<bool>(map.get_width(), false));
+  visited[start.x][start.y] = true;
+  frontier.push(new Node(start));
+  std::vector<std::pair<int, int>> directions = {
+      {-1, 0},  // Up
+      {1, 0},   // Down
+      {0, -1},  // Left
+      {0, 1}    // Right
+  };
+  while (!frontier.empty()) {
+    Node *current_node = frontier.front();
+    frontier.pop();
+    if (map.get_element_at(*current_node) == MapElement::Goal) {
+      return reconstruct_path(current_node);
+    }
+    for (const auto &direction : directions) {
+      int x = current_node->x + direction.first;
+      int y = current_node->y + direction.second;
+
+      // Check if the new cell is within the matrix boundaries and not visited
+      // yet
+      if (x >= 0 && x < map.get_width() && y >= 0 && y < map.get_height() &&
+          !visited[x][y] &&
+          map.get_element_at(*current_node) != MapElement::Obstacle) {
+        visited[x][y] = true;  // Mark the new cell as visited
+        frontier.push(new Node(MapCoord(x, y, map.get_height()),
+                               current_node));  // Enqueue the new cell
+      }
+    }
+  }
+  return {};
+}
+
+/* #endregion */
