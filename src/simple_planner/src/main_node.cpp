@@ -9,46 +9,38 @@
 
 using namespace std;
 
-void initialPoseCallback(const geometry_msgs::PoseWithCovarianceStamped::ConstPtr& msg){
-    ROS_INFO("Dentro a InitialPose");
-    cout << msg->pose.pose << endl;
-    ROS_INFO("esco da InitialPose");
-
-}
-void goalPoseCallback(const geometry_msgs::PoseStamped::ConstPtr& msg){
-    ROS_INFO("Dentro a goalPose");
-    ROS_INFO("Esco da goalPose");
-
-
-}
-void mapCallBack(const nav_msgs::OccupancyGrid::ConstPtr& msg){
-    int h = msg->info.height;
-    int w = msg->info.width;
-    // For absolutely no reason
-    // a matrix like this:
-    // 1 2 3
-    // 4 5 6 
-    // Is converted into this vector
-    // 4 5 6 1 2 3  
-    for(int i =(h-1); i >=0 ;i--){ //Start from the last 
-        for(int j  = 0; j < w; j++){
-            int idx = (i*w) + j;
-            if (msg->data[idx] == 100){
-                cout << "0 " ;
-            }
-            else if ((msg->data[idx]) == 0)
-            {
-                cout << "2 " ;
-               
-            }
-            else {
-               cout << "1 ";
-            }
-            
+ 
+// void initialPoseCallback(const geometry_msgs::PoseWithCovarianceStamped::ConstPtr& msg){}
+// void goalPoseCallback(const geometry_msgs::PoseStamped::ConstPtr& msg){}
+class Map{
+    private:
+        nav_msgs::OccupancyGrid occupancy_grid;
+        ros::Subscriber map_sub;
+    public:
+        bool msg_recieved = false;
+        Map(ros::NodeHandle node_handle){
+            ROS_INFO("Created map node and subscribed to map.");
+            map_sub = node_handle.subscribe("map",1,&Map::mapCallBack,this);
         }
-        cout << endl;
-    }
+        void mapCallBack(const nav_msgs::OccupancyGrid::ConstPtr& msg){
+            msg_recieved = true;
+            cout << msg->info.height << endl;
+            occupancy_grid = *msg;
+        }
+        std::vector<int8_t, std::allocator<int8_t>> get_data(){
+            return occupancy_grid.data;
+        }
+        int get_width(){
+            return occupancy_grid.info.width;
+        }
+        int get_height(){
+            return occupancy_grid.info.height;
+        }
+        
+        
 };
+
+
 visualization_msgs::Marker init_marker(visualization_msgs::Marker marker, float x, float y){
     marker.header.frame_id = "map";
     marker.header.stamp = ros::Time();
@@ -73,60 +65,58 @@ visualization_msgs::Marker init_marker(visualization_msgs::Marker marker, float 
     marker.lifetime = ros::Duration();
     return marker;
 }
-class MapCoords{
-    public: 
-        float x;
-        float y;
-        MapCoords(int x, int y, int n){
-            this->x = (x+1) - n/2 -.5;
-            this->y = y - n/2 -.5;
-        }
-};
+// class MapCoords{
+//     public: 
+//         float x;
+//         float y;
+//         MapCoords(int x, int y, int n){
+//             this->x = (x+1) - n/2 -.5;
+//             this->y = y - n/2 -.5;
+//         }
+// };
 
 int main( int argc, char** argv ){
     ros::init(argc, argv, "simple_planner_main_node");
-    // cv::Mat image = cv::imread("/home/lattinone/catkin_ws/simple_planner_ws/maps/map1.pgm",cv::IMREAD_GRAYSCALE);
-    // for(int i = 0; i < image.cols; i ++){
-    //     for (int j =0; j< image.rows;j++){
-    //         cout << static_cast<int>(image.at<uint8_t>(i,j)) << " ";
-    //     }
-    //     cout << endl;
-    // }
-    // cv::Mat resized;
-    // cv::resize(image,resized,cv::Size2d(400,400),0,0,cv::InterpolationFlags::INTER_NEAREST);
-    // cv::imshow("Culo",resized);
-    // cv::waitKey(0);
     ros::NodeHandle node_handle;
-    // // ros::Subscriber sub2 = n.subscribe("map", 1000, mapCallBack);
+    Map map_node(node_handle);
 
-    // ros::Subscriber sub2 = n.subscribe("initialpose", 1000, &initialPoseCallback);
-    // ros::Subscriber sub3 = n.subscribe("move_base_simple/goal", 1000, &goalPoseCallback);
     ros::Publisher pos_pub = node_handle.advertise<visualization_msgs::Marker>("visualization_marker",0);
     ros::Rate r(2);
     int n = 10;
     visualization_msgs::Marker marker;
+   
+    // for(int i = (h-1); i >=0 ;i--){ //Start from the last 
+    //     for(int j  = 0; j < w; j++){
+    //         int idx = (i*w) + j;
+    // }
     while(ros::ok()){
-        for(int j = n; j > 0;j--){
-            for(int i = 0; i < n ; i ++){
-                float x = (i+1) - n/2 -.5;
-                float y = j - n/2 -.5;
-                marker = init_marker(marker,x,y);
-                pos_pub.publish(marker);
-                r.sleep();
+        ros::spinOnce();
+        if (map_node.msg_recieved){
+            for(int y = 0; y < n; y++){
+                for(int x = 0; x<n; x++){
+                    // // OK RVIZ
+                    float x_rviz = (x+1) - n/2 - .5;
+                    float y_rviz = n/2 - y -.5;
+                    int x_map = x;
+                    int y_map = (n-1) - y;
+                    int idx = x_map + (y_map*n);
+                    if(map_node.get_data()[idx] == 100){
+                            cout << "obstacle" << endl;
+                        }
+                        else if (map_node.get_data()[idx] == 0)
+                        {
+                            cout << "road" << endl;
+                        
+                        }
+                        else {
+                            cout << "goal" << endl;
+                        }
+                    marker = init_marker(marker,x_rviz,y_rviz);
+                    pos_pub.publish(marker);
+                    r.sleep();
+                }
             }
         }
-    }
-    // while (marker_pub.getNumSubscribers() < 1)
-    // {
-    //   if (!ros::ok())
-    //   {
-    //     return 0;
-    //   }
-    //   ROS_WARN_ONCE("Please create a subscriber to the marker");
-    //   sleep(1);
-    // }
-
-    
-  
+    }  
 }
 
