@@ -7,12 +7,11 @@ CMakeFiles/main_node.dir/src/main_node.cpp.o: /home/lattinone/catkin_ws/simple_p
 CMakeFiles/main_node.dir/src/main_node.cpp.o: /opt/ros/noetic/include/geometry_msgs/Point.h
 CMakeFiles/main_node.dir/src/main_node.cpp.o: /opt/ros/noetic/include/geometry_msgs/Pose.h
 CMakeFiles/main_node.dir/src/main_node.cpp.o: /opt/ros/noetic/include/geometry_msgs/PoseStamped.h
-CMakeFiles/main_node.dir/src/main_node.cpp.o: /opt/ros/noetic/include/geometry_msgs/PoseWithCovariance.h
-CMakeFiles/main_node.dir/src/main_node.cpp.o: /opt/ros/noetic/include/geometry_msgs/PoseWithCovarianceStamped.h
 CMakeFiles/main_node.dir/src/main_node.cpp.o: /opt/ros/noetic/include/geometry_msgs/Quaternion.h
 CMakeFiles/main_node.dir/src/main_node.cpp.o: /opt/ros/noetic/include/geometry_msgs/Vector3.h
 CMakeFiles/main_node.dir/src/main_node.cpp.o: /opt/ros/noetic/include/nav_msgs/MapMetaData.h
 CMakeFiles/main_node.dir/src/main_node.cpp.o: /opt/ros/noetic/include/nav_msgs/OccupancyGrid.h
+CMakeFiles/main_node.dir/src/main_node.cpp.o: /opt/ros/noetic/include/nav_msgs/Path.h
 CMakeFiles/main_node.dir/src/main_node.cpp.o: /opt/ros/noetic/include/ros/advertise_options.h
 CMakeFiles/main_node.dir/src/main_node.cpp.o: /opt/ros/noetic/include/ros/advertise_service_options.h
 CMakeFiles/main_node.dir/src/main_node.cpp.o: /opt/ros/noetic/include/ros/assert.h
