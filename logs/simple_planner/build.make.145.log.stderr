@@ -1,9 +1,3 @@
-[35m[1mScanning dependencies of target renderer_node[0m
-[35m[1mScanning dependencies of target main_node[0m
-[35m[1mScanning dependencies of target planner_node[0m
-[ 16%] [32mBuilding CXX object CMakeFiles/renderer_node.dir/src/main_node.cpp.o[0m
-[ 33%] [32mBuilding CXX object CMakeFiles/main_node.dir/src/main_node.cpp.o[0m
-[ 50%] [32mBuilding CXX object CMakeFiles/planner_node.dir/src/main_node.cpp.o[0m
 [01m[K/home/lattinone/catkin_ws/simple_planner_ws/src/simple_planner/src/main_node.cpp:[m[K In member function ‘[01m[KMapElement Map::get_element_at(MapCoord)[m[K’:
 [01m[K/home/lattinone/catkin_ws/simple_planner_ws/src/simple_planner/src/main_node.cpp:67:9:[m[K [01;35m[Kwarning: [m[Kcontrol reaches end of non-void function [[01;35m[K-Wreturn-type[m[K]
    67 |         [01;35m[K}[m[K
@@ -16,9 +10,3 @@
 [01m[K/home/lattinone/catkin_ws/simple_planner_ws/src/simple_planner/src/main_node.cpp:67:9:[m[K [01;35m[Kwarning: [m[Kcontrol reaches end of non-void function [[01;35m[K-Wreturn-type[m[K]
    67 |         [01;35m[K}[m[K
       |         [01;35m[K^[m[K
-[ 66%] [32m[1mLinking CXX executable /home/lattinone/catkin_ws/simple_planner_ws/devel/.private/simple_planner/lib/simple_planner/planner_node[0m
-[ 83%] [32m[1mLinking CXX executable /home/lattinone/catkin_ws/simple_planner_ws/devel/.private/simple_planner/lib/simple_planner/renderer_node[0m
-[100%] [32m[1mLinking CXX executable /home/lattinone/catkin_ws/simple_planner_ws/devel/.private/simple_planner/lib/simple_planner/main_node[0m
-[100%] Built target planner_node
-[100%] Built target renderer_node
-[100%] Built target main_node
