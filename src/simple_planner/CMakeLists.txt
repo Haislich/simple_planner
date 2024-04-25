@@ -137,9 +137,12 @@ include_directories(
 ## Declare a C++ executable
 ## With catkin_make all packages are built within a single CMake context
 ## The recommended prefix ensures that target names across packages don't collide
-add_executable(main_node src/main_node.cpp)
-add_executable(renderer_node src/main_node.cpp)
-add_executable(planner_node src/main_node.cpp)
+add_executable(main_node 
+  src/main_node.cpp
+  src/server_map_handler.cpp 
+  src/rviz_handler.cpp 
+  src/planner.cpp
+)
 
 
 ## Rename C++ executable without prefix
@@ -154,12 +157,6 @@ add_executable(planner_node src/main_node.cpp)
 
 ## Specify libraries to link a library or executable target against
 target_link_libraries(main_node
-  ${catkin_LIBRARIES}
-)
-target_link_libraries(renderer_node
-  ${catkin_LIBRARIES}
-)
-target_link_libraries(planner_node
   ${catkin_LIBRARIES}
 )
 

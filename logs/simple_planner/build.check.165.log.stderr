@@ -1,0 +1,11 @@
+[31m[1mCMake Error[0m at /home/lattinone/catkin_ws/simple_planner_ws/src/simple_planner/CMakeLists.txt:134 (add_dependencies):
+  Cannot add target-level dependencies to non-existent target
+  "simple_planner".
+
+  The add_dependencies works for top-level logical targets created by the
+  add_executable, add_library, or add_custom_target commands.  If you want to
+  add file-level dependencies see the DEPENDS option of the add_custom_target
+  and add_custom_command commands.
+
+
+make: *** [Makefile:1078: cmake_check_build_system] Error 1

@@ -1,0 +1,7 @@
+[31m[1mCMake Error[0m at /home/lattinone/catkin_ws/simple_planner_ws/src/simple_planner/CMakeLists.txt:128 (add_library):
+  The target name "src/map_handler.cpp" is reserved or not valid for certain
+  CMake features, such as generator expressions, and may result in undefined
+  behavior.
+
+
+make: *** [Makefile:1126: cmake_check_build_system] Error 1

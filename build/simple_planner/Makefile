@@ -89,17 +89,6 @@ rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
 
-# Special rule for the target test
-test:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
-	/usr/bin/ctest --force-new-ctest-process $(ARGS)
-.PHONY : test
-
-# Special rule for the target test
-test/fast: test
-
-.PHONY : test/fast
-
 # Special rule for the target install/local
 install/local: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
@@ -123,6 +112,17 @@ install/fast: preinstall/fast
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
 	/usr/bin/cmake -P cmake_install.cmake
 .PHONY : install/fast
+
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
+	/usr/bin/ctest --force-new-ctest-process $(ARGS)
+.PHONY : test
+
+# Special rule for the target test
+test/fast: test
+
+.PHONY : test/fast
 
 # Special rule for the target edit_cache
 edit_cache:
@@ -558,6 +558,19 @@ rosgraph_msgs_generate_messages_eus/fast:
 .PHONY : rosgraph_msgs_generate_messages_eus/fast
 
 #=============================================================================
+# Target rules for targets named nav_msgs_generate_messages_lisp
+
+# Build rule for target.
+nav_msgs_generate_messages_lisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 nav_msgs_generate_messages_lisp
+.PHONY : nav_msgs_generate_messages_lisp
+
+# fast build rule for target.
+nav_msgs_generate_messages_lisp/fast:
+	$(MAKE) -f CMakeFiles/nav_msgs_generate_messages_lisp.dir/build.make CMakeFiles/nav_msgs_generate_messages_lisp.dir/build
+.PHONY : nav_msgs_generate_messages_lisp/fast
+
+#=============================================================================
 # Target rules for targets named actionlib_msgs_generate_messages_cpp
 
 # Build rule for target.
@@ -647,32 +660,6 @@ roscpp_generate_messages_nodejs: cmake_check_build_system
 roscpp_generate_messages_nodejs/fast:
 	$(MAKE) -f CMakeFiles/roscpp_generate_messages_nodejs.dir/build.make CMakeFiles/roscpp_generate_messages_nodejs.dir/build
 .PHONY : roscpp_generate_messages_nodejs/fast
-
-#=============================================================================
-# Target rules for targets named nav_msgs_generate_messages_lisp
-
-# Build rule for target.
-nav_msgs_generate_messages_lisp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 nav_msgs_generate_messages_lisp
-.PHONY : nav_msgs_generate_messages_lisp
-
-# fast build rule for target.
-nav_msgs_generate_messages_lisp/fast:
-	$(MAKE) -f CMakeFiles/nav_msgs_generate_messages_lisp.dir/build.make CMakeFiles/nav_msgs_generate_messages_lisp.dir/build
-.PHONY : nav_msgs_generate_messages_lisp/fast
-
-#=============================================================================
-# Target rules for targets named renderer_node
-
-# Build rule for target.
-renderer_node: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 renderer_node
-.PHONY : renderer_node
-
-# fast build rule for target.
-renderer_node/fast:
-	$(MAKE) -f CMakeFiles/renderer_node.dir/build.make CMakeFiles/renderer_node.dir/build
-.PHONY : renderer_node/fast
 
 #=============================================================================
 # Target rules for targets named roscpp_generate_messages_py
@@ -831,19 +818,6 @@ sensor_msgs_generate_messages_lisp/fast:
 .PHONY : sensor_msgs_generate_messages_lisp/fast
 
 #=============================================================================
-# Target rules for targets named sensor_msgs_generate_messages_nodejs
-
-# Build rule for target.
-sensor_msgs_generate_messages_nodejs: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 sensor_msgs_generate_messages_nodejs
-.PHONY : sensor_msgs_generate_messages_nodejs
-
-# fast build rule for target.
-sensor_msgs_generate_messages_nodejs/fast:
-	$(MAKE) -f CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/build.make CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/build
-.PHONY : sensor_msgs_generate_messages_nodejs/fast
-
-#=============================================================================
 # Target rules for targets named nav_msgs_generate_messages_py
 
 # Build rule for target.
@@ -870,6 +844,19 @@ tf_generate_messages_lisp/fast:
 .PHONY : tf_generate_messages_lisp/fast
 
 #=============================================================================
+# Target rules for targets named sensor_msgs_generate_messages_nodejs
+
+# Build rule for target.
+sensor_msgs_generate_messages_nodejs: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 sensor_msgs_generate_messages_nodejs
+.PHONY : sensor_msgs_generate_messages_nodejs
+
+# fast build rule for target.
+sensor_msgs_generate_messages_nodejs/fast:
+	$(MAKE) -f CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/build.make CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/build
+.PHONY : sensor_msgs_generate_messages_nodejs/fast
+
+#=============================================================================
 # Target rules for targets named tf_generate_messages_nodejs
 
 # Build rule for target.
@@ -894,19 +881,6 @@ actionlib_generate_messages_nodejs: cmake_check_build_system
 actionlib_generate_messages_nodejs/fast:
 	$(MAKE) -f CMakeFiles/actionlib_generate_messages_nodejs.dir/build.make CMakeFiles/actionlib_generate_messages_nodejs.dir/build
 .PHONY : actionlib_generate_messages_nodejs/fast
-
-#=============================================================================
-# Target rules for targets named planner_node
-
-# Build rule for target.
-planner_node: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 planner_node
-.PHONY : planner_node
-
-# fast build rule for target.
-planner_node/fast:
-	$(MAKE) -f CMakeFiles/planner_node.dir/build.make CMakeFiles/planner_node.dir/build
-.PHONY : planner_node/fast
 
 #=============================================================================
 # Target rules for targets named tf2_msgs_generate_messages_lisp
@@ -992,9 +966,7 @@ src/main_node.o: src/main_node.cpp.o
 
 # target to build an object file
 src/main_node.cpp.o:
-	$(MAKE) -f CMakeFiles/renderer_node.dir/build.make CMakeFiles/renderer_node.dir/src/main_node.cpp.o
 	$(MAKE) -f CMakeFiles/main_node.dir/build.make CMakeFiles/main_node.dir/src/main_node.cpp.o
-	$(MAKE) -f CMakeFiles/planner_node.dir/build.make CMakeFiles/planner_node.dir/src/main_node.cpp.o
 .PHONY : src/main_node.cpp.o
 
 src/main_node.i: src/main_node.cpp.i
@@ -1003,9 +975,7 @@ src/main_node.i: src/main_node.cpp.i
 
 # target to preprocess a source file
 src/main_node.cpp.i:
-	$(MAKE) -f CMakeFiles/renderer_node.dir/build.make CMakeFiles/renderer_node.dir/src/main_node.cpp.i
 	$(MAKE) -f CMakeFiles/main_node.dir/build.make CMakeFiles/main_node.dir/src/main_node.cpp.i
-	$(MAKE) -f CMakeFiles/planner_node.dir/build.make CMakeFiles/planner_node.dir/src/main_node.cpp.i
 .PHONY : src/main_node.cpp.i
 
 src/main_node.s: src/main_node.cpp.s
@@ -1014,10 +984,89 @@ src/main_node.s: src/main_node.cpp.s
 
 # target to generate assembly for a file
 src/main_node.cpp.s:
-	$(MAKE) -f CMakeFiles/renderer_node.dir/build.make CMakeFiles/renderer_node.dir/src/main_node.cpp.s
 	$(MAKE) -f CMakeFiles/main_node.dir/build.make CMakeFiles/main_node.dir/src/main_node.cpp.s
-	$(MAKE) -f CMakeFiles/planner_node.dir/build.make CMakeFiles/planner_node.dir/src/main_node.cpp.s
 .PHONY : src/main_node.cpp.s
+
+src/planner.o: src/planner.cpp.o
+
+.PHONY : src/planner.o
+
+# target to build an object file
+src/planner.cpp.o:
+	$(MAKE) -f CMakeFiles/main_node.dir/build.make CMakeFiles/main_node.dir/src/planner.cpp.o
+.PHONY : src/planner.cpp.o
+
+src/planner.i: src/planner.cpp.i
+
+.PHONY : src/planner.i
+
+# target to preprocess a source file
+src/planner.cpp.i:
+	$(MAKE) -f CMakeFiles/main_node.dir/build.make CMakeFiles/main_node.dir/src/planner.cpp.i
+.PHONY : src/planner.cpp.i
+
+src/planner.s: src/planner.cpp.s
+
+.PHONY : src/planner.s
+
+# target to generate assembly for a file
+src/planner.cpp.s:
+	$(MAKE) -f CMakeFiles/main_node.dir/build.make CMakeFiles/main_node.dir/src/planner.cpp.s
+.PHONY : src/planner.cpp.s
+
+src/rviz_handler.o: src/rviz_handler.cpp.o
+
+.PHONY : src/rviz_handler.o
+
+# target to build an object file
+src/rviz_handler.cpp.o:
+	$(MAKE) -f CMakeFiles/main_node.dir/build.make CMakeFiles/main_node.dir/src/rviz_handler.cpp.o
+.PHONY : src/rviz_handler.cpp.o
+
+src/rviz_handler.i: src/rviz_handler.cpp.i
+
+.PHONY : src/rviz_handler.i
+
+# target to preprocess a source file
+src/rviz_handler.cpp.i:
+	$(MAKE) -f CMakeFiles/main_node.dir/build.make CMakeFiles/main_node.dir/src/rviz_handler.cpp.i
+.PHONY : src/rviz_handler.cpp.i
+
+src/rviz_handler.s: src/rviz_handler.cpp.s
+
+.PHONY : src/rviz_handler.s
+
+# target to generate assembly for a file
+src/rviz_handler.cpp.s:
+	$(MAKE) -f CMakeFiles/main_node.dir/build.make CMakeFiles/main_node.dir/src/rviz_handler.cpp.s
+.PHONY : src/rviz_handler.cpp.s
+
+src/server_map_handler.o: src/server_map_handler.cpp.o
+
+.PHONY : src/server_map_handler.o
+
+# target to build an object file
+src/server_map_handler.cpp.o:
+	$(MAKE) -f CMakeFiles/main_node.dir/build.make CMakeFiles/main_node.dir/src/server_map_handler.cpp.o
+.PHONY : src/server_map_handler.cpp.o
+
+src/server_map_handler.i: src/server_map_handler.cpp.i
+
+.PHONY : src/server_map_handler.i
+
+# target to preprocess a source file
+src/server_map_handler.cpp.i:
+	$(MAKE) -f CMakeFiles/main_node.dir/build.make CMakeFiles/main_node.dir/src/server_map_handler.cpp.i
+.PHONY : src/server_map_handler.cpp.i
+
+src/server_map_handler.s: src/server_map_handler.cpp.s
+
+.PHONY : src/server_map_handler.s
+
+# target to generate assembly for a file
+src/server_map_handler.cpp.s:
+	$(MAKE) -f CMakeFiles/main_node.dir/build.make CMakeFiles/main_node.dir/src/server_map_handler.cpp.s
+.PHONY : src/server_map_handler.cpp.s
 
 # Help Target
 help:
@@ -1028,7 +1077,6 @@ help:
 	@echo "... install/strip"
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
-	@echo "... test"
 	@echo "... roscpp_generate_messages_eus"
 	@echo "... _catkin_empty_exported_target"
 	@echo "... roscpp_generate_messages_lisp"
@@ -1061,6 +1109,7 @@ help:
 	@echo "... sensor_msgs_generate_messages_py"
 	@echo "... nav_msgs_generate_messages_cpp"
 	@echo "... rosgraph_msgs_generate_messages_eus"
+	@echo "... nav_msgs_generate_messages_lisp"
 	@echo "... actionlib_msgs_generate_messages_cpp"
 	@echo "... std_msgs_generate_messages_lisp"
 	@echo "... run_tests"
@@ -1068,8 +1117,6 @@ help:
 	@echo "... geometry_msgs_generate_messages_cpp"
 	@echo "... tf2_msgs_generate_messages_py"
 	@echo "... roscpp_generate_messages_nodejs"
-	@echo "... nav_msgs_generate_messages_lisp"
-	@echo "... renderer_node"
 	@echo "... roscpp_generate_messages_py"
 	@echo "... actionlib_msgs_generate_messages_nodejs"
 	@echo "... actionlib_msgs_generate_messages_lisp"
@@ -1078,17 +1125,17 @@ help:
 	@echo "... main_node"
 	@echo "... actionlib_generate_messages_eus"
 	@echo "... rosgraph_msgs_generate_messages_cpp"
+	@echo "... test"
 	@echo "... nav_msgs_generate_messages_nodejs"
 	@echo "... sensor_msgs_generate_messages_cpp"
 	@echo "... sensor_msgs_generate_messages_eus"
 	@echo "... sensor_msgs_generate_messages_lisp"
-	@echo "... edit_cache"
-	@echo "... sensor_msgs_generate_messages_nodejs"
 	@echo "... nav_msgs_generate_messages_py"
 	@echo "... tf_generate_messages_lisp"
+	@echo "... sensor_msgs_generate_messages_nodejs"
+	@echo "... edit_cache"
 	@echo "... tf_generate_messages_nodejs"
 	@echo "... actionlib_generate_messages_nodejs"
-	@echo "... planner_node"
 	@echo "... tf2_msgs_generate_messages_lisp"
 	@echo "... tf2_msgs_generate_messages_nodejs"
 	@echo "... gmock_main"
@@ -1098,6 +1145,15 @@ help:
 	@echo "... src/main_node.o"
 	@echo "... src/main_node.i"
 	@echo "... src/main_node.s"
+	@echo "... src/planner.o"
+	@echo "... src/planner.i"
+	@echo "... src/planner.s"
+	@echo "... src/rviz_handler.o"
+	@echo "... src/rviz_handler.i"
+	@echo "... src/rviz_handler.s"
+	@echo "... src/server_map_handler.o"
+	@echo "... src/server_map_handler.i"
+	@echo "... src/server_map_handler.s"
 .PHONY : help
 
 

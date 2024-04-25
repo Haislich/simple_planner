@@ -1,0 +1,12 @@
+[35m[1mScanning dependencies of target main_node[0m
+[ 33%] [32mBuilding CXX object CMakeFiles/main_node.dir/src/server_map_handler.cpp.o[0m
+[ 66%] [32m[1mLinking CXX executable /home/lattinone/catkin_ws/simple_planner_ws/devel/.private/simple_planner/lib/simple_planner/main_node[0m
+/usr/bin/ld: CMakeFiles/main_node.dir/src/main_node.cpp.o: in function `main':
+main_node.cpp:(.text+0x1c9): undefined reference to `RvizCoord::RvizCoord(int, int, int)'
+/usr/bin/ld: main_node.cpp:(.text+0x207): undefined reference to `Rviz::Rviz(ros::NodeHandle, RvizCoord)'
+/usr/bin/ld: main_node.cpp:(.text+0x287): undefined reference to `RvizCoord::RvizCoord(int, int, int)'
+/usr/bin/ld: main_node.cpp:(.text+0x2a2): undefined reference to `Rviz::update_robot_position(RvizCoord)'
+collect2: error: ld returned 1 exit status
+make[2]: *** [CMakeFiles/main_node.dir/build.make:170: /home/lattinone/catkin_ws/simple_planner_ws/devel/.private/simple_planner/lib/simple_planner/main_node] Error 1
+make[1]: *** [CMakeFiles/Makefile2:1352: CMakeFiles/main_node.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

@@ -1,0 +1,56 @@
+[01m[K/home/lattinone/catkin_ws/simple_planner_ws/src/simple_planner/src/rviz_handler.cpp:2:7:[m[K [01;31m[Kerror: [m[Kredefinition of ‘[01m[Kclass RvizCoord[m[K’
+    2 | class [01;31m[KRvizCoord[m[K{
+      |       [01;31m[K^~~~~~~~~[m[K
+In file included from [01m[K/home/lattinone/catkin_ws/simple_planner_ws/src/simple_planner/src/rviz_handler.cpp:1[m[K:
+[01m[K/home/lattinone/catkin_ws/simple_planner_ws/src/simple_planner/src/rviz_handler.h:5:7:[m[K [01;36m[Knote: [m[Kprevious definition of ‘[01m[Kclass RvizCoord[m[K’
+    5 | class [01;36m[KRvizCoord[m[K{
+      |       [01;36m[K^~~~~~~~~[m[K
+[01m[K/home/lattinone/catkin_ws/simple_planner_ws/src/simple_planner/src/rviz_handler.cpp:11:7:[m[K [01;31m[Kerror: [m[Kredefinition of ‘[01m[Kclass Rviz[m[K’
+   11 | class [01;31m[KRviz[m[K{
+      |       [01;31m[K^~~~[m[K
+In file included from [01m[K/home/lattinone/catkin_ws/simple_planner_ws/src/simple_planner/src/rviz_handler.cpp:1[m[K:
+[01m[K/home/lattinone/catkin_ws/simple_planner_ws/src/simple_planner/src/rviz_handler.h:11:7:[m[K [01;36m[Knote: [m[Kprevious definition of ‘[01m[Kclass Rviz[m[K’
+   11 | class [01;36m[KRviz[m[K{
+      |       [01;36m[K^~~~[m[K
+make[2]: *** [CMakeFiles/simple_planner.dir/build.make:76: CMakeFiles/simple_planner.dir/src/rviz_handler.cpp.o] Error 1
+make[2]: *** Waiting for unfinished jobs....
+[01m[K/home/lattinone/catkin_ws/simple_planner_ws/src/simple_planner/src/server_map_handler.cpp:[m[K In member function ‘[01m[KMapElement Map::get_element_at(MapCoord)[m[K’:
+[01m[K/home/lattinone/catkin_ws/simple_planner_ws/src/simple_planner/src/server_map_handler.cpp:40:1:[m[K [01;35m[Kwarning: [m[Kcontrol reaches end of non-void function [[01;35m[K-Wreturn-type[m[K]
+   40 | [01;35m[K}[m[K
+      | [01;35m[K^[m[K
+/usr/bin/ld: CMakeFiles/main_node.dir/src/main_node.cpp.o: in function `main':
+main_node.cpp:(.text+0x19c): undefined reference to `Map::Map(ros::NodeHandle)'
+/usr/bin/ld: main_node.cpp:(.text+0x1c9): undefined reference to `RvizCoord::RvizCoord(int, int, int)'
+/usr/bin/ld: main_node.cpp:(.text+0x207): undefined reference to `Rviz::Rviz(ros::NodeHandle, RvizCoord)'
+/usr/bin/ld: main_node.cpp:(.text+0x287): undefined reference to `RvizCoord::RvizCoord(int, int, int)'
+/usr/bin/ld: main_node.cpp:(.text+0x2a2): undefined reference to `Rviz::update_robot_position(RvizCoord)'
+/usr/bin/ld: main_node.cpp:(.text+0x2c2): undefined reference to `MapCoord::MapCoord(int, int, int)'
+/usr/bin/ld: main_node.cpp:(.text+0x2d9): undefined reference to `Map::get_element_at(MapCoord)'
+collect2: error: ld returned 1 exit status
+make[2]: *** [CMakeFiles/main_node.dir/build.make:155: /home/lattinone/catkin_ws/simple_planner_ws/devel/.private/simple_planner/lib/simple_planner/main_node] Error 1
+make[1]: *** [CMakeFiles/Makefile2:1439: CMakeFiles/main_node.dir/all] Error 2
+make[1]: *** Waiting for unfinished jobs....
+/usr/bin/ld: CMakeFiles/renderer_node.dir/src/main_node.cpp.o: in function `main':
+main_node.cpp:(.text+0x19c): undefined reference to `Map::Map(ros::NodeHandle)'
+/usr/bin/ld: main_node.cpp:(.text+0x1c9): undefined reference to `RvizCoord::RvizCoord(int, int, int)'
+/usr/bin/ld: main_node.cpp:(.text+0x207): undefined reference to `Rviz::Rviz(ros::NodeHandle, RvizCoord)'
+/usr/bin/ld: main_node.cpp:(.text+0x287): undefined reference to `RvizCoord::RvizCoord(int, int, int)'
+/usr/bin/ld: main_node.cpp:(.text+0x2a2): undefined reference to `Rviz::update_robot_position(RvizCoord)'
+/usr/bin/ld: main_node.cpp:(.text+0x2c2): undefined reference to `MapCoord::MapCoord(int, int, int)'
+/usr/bin/ld: main_node.cpp:(.text+0x2d9): undefined reference to `Map::get_element_at(MapCoord)'
+collect2: error: ld returned 1 exit status
+make[2]: *** [CMakeFiles/renderer_node.dir/build.make:155: /home/lattinone/catkin_ws/simple_planner_ws/devel/.private/simple_planner/lib/simple_planner/renderer_node] Error 1
+make[1]: *** [CMakeFiles/Makefile2:1277: CMakeFiles/renderer_node.dir/all] Error 2
+make[1]: *** [CMakeFiles/Makefile2:791: CMakeFiles/simple_planner.dir/all] Error 2
+/usr/bin/ld: CMakeFiles/planner_node.dir/src/main_node.cpp.o: in function `main':
+main_node.cpp:(.text+0x19c): undefined reference to `Map::Map(ros::NodeHandle)'
+/usr/bin/ld: main_node.cpp:(.text+0x1c9): undefined reference to `RvizCoord::RvizCoord(int, int, int)'
+/usr/bin/ld: main_node.cpp:(.text+0x207): undefined reference to `Rviz::Rviz(ros::NodeHandle, RvizCoord)'
+/usr/bin/ld: main_node.cpp:(.text+0x287): undefined reference to `RvizCoord::RvizCoord(int, int, int)'
+/usr/bin/ld: main_node.cpp:(.text+0x2a2): undefined reference to `Rviz::update_robot_position(RvizCoord)'
+/usr/bin/ld: main_node.cpp:(.text+0x2c2): undefined reference to `MapCoord::MapCoord(int, int, int)'
+/usr/bin/ld: main_node.cpp:(.text+0x2d9): undefined reference to `Map::get_element_at(MapCoord)'
+collect2: error: ld returned 1 exit status
+make[2]: *** [CMakeFiles/planner_node.dir/build.make:155: /home/lattinone/catkin_ws/simple_planner_ws/devel/.private/simple_planner/lib/simple_planner/planner_node] Error 1
+make[1]: *** [CMakeFiles/Makefile2:197: CMakeFiles/planner_node.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

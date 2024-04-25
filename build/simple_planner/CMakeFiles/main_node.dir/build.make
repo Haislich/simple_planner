@@ -70,14 +70,59 @@ CMakeFiles/main_node.dir/src/main_node.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main_node.dir/src/main_node.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lattinone/catkin_ws/simple_planner_ws/src/simple_planner/src/main_node.cpp -o CMakeFiles/main_node.dir/src/main_node.cpp.s
 
+CMakeFiles/main_node.dir/src/server_map_handler.cpp.o: CMakeFiles/main_node.dir/flags.make
+CMakeFiles/main_node.dir/src/server_map_handler.cpp.o: /home/lattinone/catkin_ws/simple_planner_ws/src/simple_planner/src/server_map_handler.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lattinone/catkin_ws/simple_planner_ws/build/simple_planner/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/main_node.dir/src/server_map_handler.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/main_node.dir/src/server_map_handler.cpp.o -c /home/lattinone/catkin_ws/simple_planner_ws/src/simple_planner/src/server_map_handler.cpp
+
+CMakeFiles/main_node.dir/src/server_map_handler.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main_node.dir/src/server_map_handler.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lattinone/catkin_ws/simple_planner_ws/src/simple_planner/src/server_map_handler.cpp > CMakeFiles/main_node.dir/src/server_map_handler.cpp.i
+
+CMakeFiles/main_node.dir/src/server_map_handler.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main_node.dir/src/server_map_handler.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lattinone/catkin_ws/simple_planner_ws/src/simple_planner/src/server_map_handler.cpp -o CMakeFiles/main_node.dir/src/server_map_handler.cpp.s
+
+CMakeFiles/main_node.dir/src/rviz_handler.cpp.o: CMakeFiles/main_node.dir/flags.make
+CMakeFiles/main_node.dir/src/rviz_handler.cpp.o: /home/lattinone/catkin_ws/simple_planner_ws/src/simple_planner/src/rviz_handler.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lattinone/catkin_ws/simple_planner_ws/build/simple_planner/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/main_node.dir/src/rviz_handler.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/main_node.dir/src/rviz_handler.cpp.o -c /home/lattinone/catkin_ws/simple_planner_ws/src/simple_planner/src/rviz_handler.cpp
+
+CMakeFiles/main_node.dir/src/rviz_handler.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main_node.dir/src/rviz_handler.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lattinone/catkin_ws/simple_planner_ws/src/simple_planner/src/rviz_handler.cpp > CMakeFiles/main_node.dir/src/rviz_handler.cpp.i
+
+CMakeFiles/main_node.dir/src/rviz_handler.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main_node.dir/src/rviz_handler.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lattinone/catkin_ws/simple_planner_ws/src/simple_planner/src/rviz_handler.cpp -o CMakeFiles/main_node.dir/src/rviz_handler.cpp.s
+
+CMakeFiles/main_node.dir/src/planner.cpp.o: CMakeFiles/main_node.dir/flags.make
+CMakeFiles/main_node.dir/src/planner.cpp.o: /home/lattinone/catkin_ws/simple_planner_ws/src/simple_planner/src/planner.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lattinone/catkin_ws/simple_planner_ws/build/simple_planner/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/main_node.dir/src/planner.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/main_node.dir/src/planner.cpp.o -c /home/lattinone/catkin_ws/simple_planner_ws/src/simple_planner/src/planner.cpp
+
+CMakeFiles/main_node.dir/src/planner.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main_node.dir/src/planner.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lattinone/catkin_ws/simple_planner_ws/src/simple_planner/src/planner.cpp > CMakeFiles/main_node.dir/src/planner.cpp.i
+
+CMakeFiles/main_node.dir/src/planner.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main_node.dir/src/planner.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lattinone/catkin_ws/simple_planner_ws/src/simple_planner/src/planner.cpp -o CMakeFiles/main_node.dir/src/planner.cpp.s
+
 # Object files for target main_node
 main_node_OBJECTS = \
-"CMakeFiles/main_node.dir/src/main_node.cpp.o"
+"CMakeFiles/main_node.dir/src/main_node.cpp.o" \
+"CMakeFiles/main_node.dir/src/server_map_handler.cpp.o" \
+"CMakeFiles/main_node.dir/src/rviz_handler.cpp.o" \
+"CMakeFiles/main_node.dir/src/planner.cpp.o"
 
 # External object files for target main_node
 main_node_EXTERNAL_OBJECTS =
 
 /home/lattinone/catkin_ws/simple_planner_ws/devel/.private/simple_planner/lib/simple_planner/main_node: CMakeFiles/main_node.dir/src/main_node.cpp.o
+/home/lattinone/catkin_ws/simple_planner_ws/devel/.private/simple_planner/lib/simple_planner/main_node: CMakeFiles/main_node.dir/src/server_map_handler.cpp.o
+/home/lattinone/catkin_ws/simple_planner_ws/devel/.private/simple_planner/lib/simple_planner/main_node: CMakeFiles/main_node.dir/src/rviz_handler.cpp.o
+/home/lattinone/catkin_ws/simple_planner_ws/devel/.private/simple_planner/lib/simple_planner/main_node: CMakeFiles/main_node.dir/src/planner.cpp.o
 /home/lattinone/catkin_ws/simple_planner_ws/devel/.private/simple_planner/lib/simple_planner/main_node: CMakeFiles/main_node.dir/build.make
 /home/lattinone/catkin_ws/simple_planner_ws/devel/.private/simple_planner/lib/simple_planner/main_node: /opt/ros/noetic/lib/libtf.so
 /home/lattinone/catkin_ws/simple_planner_ws/devel/.private/simple_planner/lib/simple_planner/main_node: /opt/ros/noetic/lib/libtf2_ros.so
@@ -151,7 +196,7 @@ main_node_EXTERNAL_OBJECTS =
 /home/lattinone/catkin_ws/simple_planner_ws/devel/.private/simple_planner/lib/simple_planner/main_node: /usr/lib/x86_64-linux-gnu/libboost_thread.so.1.71.0
 /home/lattinone/catkin_ws/simple_planner_ws/devel/.private/simple_planner/lib/simple_planner/main_node: /usr/lib/x86_64-linux-gnu/libconsole_bridge.so.0.4
 /home/lattinone/catkin_ws/simple_planner_ws/devel/.private/simple_planner/lib/simple_planner/main_node: CMakeFiles/main_node.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/lattinone/catkin_ws/simple_planner_ws/build/simple_planner/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable /home/lattinone/catkin_ws/simple_planner_ws/devel/.private/simple_planner/lib/simple_planner/main_node"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/lattinone/catkin_ws/simple_planner_ws/build/simple_planner/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable /home/lattinone/catkin_ws/simple_planner_ws/devel/.private/simple_planner/lib/simple_planner/main_node"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/main_node.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
