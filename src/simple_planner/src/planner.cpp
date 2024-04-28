@@ -14,8 +14,9 @@ std::vector<RvizCoord> BFS::reconstruct_path(Node *goal_node) {
   Node *current_node = goal_node;
 
   while (current_node != nullptr) {
-    path.push_back(
-        RvizCoord(current_node->x, current_node->y, map.get_height()));
+    path.push_back(RvizCoord(current_node->x, current_node->y, map.get_width(),
+                             map.get_height()));
+
     current_node = current_node->parent;
   }
 
@@ -26,13 +27,13 @@ std::vector<RvizCoord> BFS::reconstruct_path(Node *goal_node) {
 std::vector<RvizCoord> BFS::plan(MapCoord start) {
   if (map.get_element_at(start) == MapElement::Goal) {
     return std::vector<RvizCoord>(
-        1, RvizCoord(start.x, start.y, map.get_height()));
+        1, RvizCoord(start.x, start.y, map.get_width(), map.get_height()));
   }
 
   // Frontier is a  fifo queue.
   std::queue<Node *> frontier;
   std::vector<std::vector<bool>> visited(
-      map.get_height(), std::vector<bool>(map.get_width(), false));
+      map.get_width(), std::vector<bool>(map.get_height(), false));
   visited[start.x][start.y] = true;
   frontier.push(new Node(start));
   std::vector<std::pair<int, int>> directions = {
@@ -43,6 +44,7 @@ std::vector<RvizCoord> BFS::plan(MapCoord start) {
   };
   while (!frontier.empty()) {
     Node *current_node = frontier.front();
+
     frontier.pop();
     if (map.get_element_at(*current_node) == MapElement::Goal) {
       return reconstruct_path(current_node);
@@ -58,8 +60,9 @@ std::vector<RvizCoord> BFS::plan(MapCoord start) {
           map.get_element_at(*current_node) != MapElement::Obstacle) {
         visited[x][y] = true;  // Mark the new cell as visited
 
-        frontier.push(new Node(MapCoord(x, y, map.get_height()),
-                               current_node));  // Enqueue the new cell
+        frontier.push(
+            new Node(MapCoord(x, y, map.get_width(), map.get_height()),
+                     current_node));  // Enqueue the new cell
       }
     }
   }

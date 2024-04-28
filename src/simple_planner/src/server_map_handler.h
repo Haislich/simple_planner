@@ -9,11 +9,7 @@ class MapCoord {
   int x;
   int y;
   int idx;
-  MapCoord(int x, int y, int n);
-  bool operator==(const MapCoord& otherPoint) const;
-  struct HashFunction {
-    size_t operator()(const MapCoord& point) const;
-  };
+  MapCoord(int x, int y, int w, int h);
 };
 class Map {
  private:

@@ -13,15 +13,16 @@ class RvizCoord {
  public:
   float x;
   float y;
-  int n;
-  RvizCoord(int x, int y, int n);
+  int w;
+  int h;
+  RvizCoord(int x, int y, int w, int h);
 };
 class RvizMap {
  public:
   visualization_msgs::Marker robot_marker;
   ros::Publisher rviz_pub;
 
-  RvizMap(ros::NodeHandle node_handle, RvizCoord coord);
+  RvizMap(ros::NodeHandle node_handle);
   void update_robot_position(RvizCoord coord);
 };
 

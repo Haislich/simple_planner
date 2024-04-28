@@ -17,29 +17,16 @@ int main(int argc, char** argv) {
       ROS_INFO_ONCE("Waiting to get data from map_server...");
     }
     ROS_INFO("Map data recieved.");
-
-    if (map.get_height() != map.get_width()) {
-      ROS_ERROR("Unsopported Map. Maps must be square matrixes.");
-      return 1;
-    }
-    int n = map.get_height();
-    // if (n % 2 != 0) {
-    //   ROS_ERROR(
-    //       "Unsopported Map. Maps must have an even number of row and
-    //       columns.");
-    //   return 1;
-    // }
-    MapCoord initial_position(MapCoord(initial_x, initial_y, n));
-    RvizMap rviz_map(node_handle,
-                     RvizCoord(initial_position.x, initial_position.y, n));
-
+    int w = map.get_width();
+    int h = map.get_height();
+    MapCoord initial_position(initial_x, initial_y, w, h);
+    RvizMap rviz_map(node_handle);
     RvizPath rviz_path(node_handle);
-
     if (map.get_element_at(initial_position) == MapElement::Obstacle) {
       ROS_ERROR("No path could be found from this sarting position.");
       return 1;
     }
-    if (initial_x >= n || initial_x < 0 || initial_y >= n || initial_y < 0) {
+    if (initial_x >= w || initial_x < 0 || initial_y >= h || initial_y < 0) {
       ROS_ERROR("Invalid starting position.");
       return 1;
     }
@@ -51,6 +38,8 @@ int main(int argc, char** argv) {
            rviz_path.path_pub.getNumSubscribers() < 1) {
       ROS_INFO_ONCE("Waiting for rviz to subscribe.");
     }
+    rviz_map.update_robot_position(
+        RvizCoord(initial_position.x, initial_position.y, w, h));
     ROS_INFO("Press any key to start.");
     std::cin.get();
     if (path.size() == 0) {
