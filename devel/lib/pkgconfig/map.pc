@@ -1,1 +1,0 @@
-/home/lattinone/catkin_ws/simple_planner_ws/devel/.private/map/lib/pkgconfig/map.pc

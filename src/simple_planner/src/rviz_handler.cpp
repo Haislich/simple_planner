@@ -1,7 +1,13 @@
 #include "rviz_handler.h"
-RvizCoord::RvizCoord(int n, int x, int y) {
-  this->x = (x + 1) - n / 2 - .5;
-  this->y = n / 2 - y - .5;
+RvizCoord::RvizCoord(int x, int y, int n) {
+  if (n % 2) {
+    this->x = x - n / 2;
+    this->y = n / 2 - y;
+  } else {
+    this->x = (x + 1) - n / 2 - .5;
+    this->y = n / 2 - y - .5;
+  }
+  this->n = n;
 }
 
 RvizMap::RvizMap(ros::NodeHandle node_handle, RvizCoord coord) {
@@ -58,9 +64,11 @@ void RvizPath::update_path(RvizCoord coord) {
   position.x = coord.x;
   position.y = coord.y;
   position.z = 0;
+
   geometry_msgs::Quaternion orientation;
-  orientation.x = 1;
-  orientation.y = 1;
+
+  orientation.x = 0;
+  orientation.y = 0;
   orientation.z = 0;
   orientation.w = 0;
   pose.pose.orientation = orientation;

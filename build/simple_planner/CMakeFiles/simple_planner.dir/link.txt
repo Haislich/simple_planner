@@ -1,1 +1,0 @@
-/usr/bin/c++ -fPIC   -shared -Wl,-soname,libsimple_planner.so -o /home/lattinone/catkin_ws/simple_planner_ws/devel/.private/simple_planner/lib/libsimple_planner.so CMakeFiles/simple_planner.dir/src/server_map_handler.cpp.o CMakeFiles/simple_planner.dir/src/rviz_handler.cpp.o 

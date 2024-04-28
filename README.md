@@ -28,3 +28,4 @@ rosrun simple_planner simple_planner_node
 - [Marker Example for rviz](http://wiki.ros.org/rviz/Tutorials/Markers%3A%20Basic%20Shapes)
 - [How to document](https://softwareengineering.stackexchange.com/questions/84071/is-it-better-to-document-functions-in-the-header-file-or-the-source-file)
 - [Log on screen when roslaunching](https://answers.ros.org/question/258512/enable-roslaunch-to-log/)
+- [Map Server](http://wiki.ros.org/map_server)

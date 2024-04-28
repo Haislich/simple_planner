@@ -1,9 +1,0 @@
-[31m[1mCMake Error[0m at /home/lattinone/catkin_ws/simple_planner_ws/src/simple_planner/CMakeLists.txt:127 (add_subdirectory):
-  The source directory
-
-    /home/lattinone/catkin_ws/simple_planner_ws/src/simple_planner/src
-
-  does not contain a CMakeLists.txt file.
-
-
-make: *** [Makefile:1112: cmake_check_build_system] Error 1

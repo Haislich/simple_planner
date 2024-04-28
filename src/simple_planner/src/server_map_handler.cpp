@@ -18,12 +18,11 @@ size_t MapCoord::HashFunction::operator()(const MapCoord& point) const {
 
 Map::Map(ros::NodeHandle node_handle) {
   ROS_INFO("Created map node and subscribed to map.");
-  map_sub = node_handle.subscribe("map", 1, &Map::mapCallBack, this);
+  map_sub = node_handle.subscribe("map", 100, &Map::mapCallBack, this);
 }
 void Map::mapCallBack(const nav_msgs::OccupancyGrid::ConstPtr& msg) {
-  msg_recieved = true;
-  std::cout << msg->info.height << std::endl;
   occupancy_grid = *msg;
+  msg_recieved = true;
 }
 std::vector<int8_t, std::allocator<int8_t>> Map::get_data() {
   return occupancy_grid.data;

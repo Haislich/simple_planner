@@ -1,6 +1,0 @@
-[31m[1mCMake Error[0m at /home/lattinone/catkin_ws/simple_planner_ws/src/simple_planner/CMakeLists.txt:151 (target_link_libraries):
-  Cannot specify link libraries for target "renderer_node" which is not built
-  by this project.
-
-
-make: *** [Makefile:714: cmake_check_build_system] Error 1

@@ -7,11 +7,14 @@
 #include <std_msgs/Header.h>
 #include <visualization_msgs/Marker.h>
 
+#include <vector>
+
 class RvizCoord {
  public:
   float x;
   float y;
-  RvizCoord(int n, int x, int y);
+  int n;
+  RvizCoord(int x, int y, int n);
 };
 class RvizMap {
  public:

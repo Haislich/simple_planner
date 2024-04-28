@@ -1,4 +1,0 @@
-[35m[1mScanning dependencies of target drawer_node[0m
-[ 50%] [32mBuilding CXX object CMakeFiles/drawer_node.dir/src/drawer_node.cpp.o[0m
-[100%] [32m[1mLinking CXX executable /home/lattinone/catkin_ws/simple_planner_ws/devel/.private/drawer/lib/drawer/drawer_node[0m
-[100%] Built target drawer_node

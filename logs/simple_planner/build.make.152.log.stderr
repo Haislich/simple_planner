@@ -1,7 +1,0 @@
-[01m[K/home/lattinone/catkin_ws/simple_planner_ws/src/simple_planner/src/main_node.cpp:5:10:[m[K [01;31m[Kfatal error: [m[Kinclude/simple_planner/server_map_handler.h: No such file or directory
-    5 | #include [01;31m[K"include/simple_planner/server_map_handler.h"[m[K
-      |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
-compilation terminated.
-make[2]: *** [CMakeFiles/main_node.dir/build.make:63: CMakeFiles/main_node.dir/src/main_node.cpp.o] Error 1
-make[1]: *** [CMakeFiles/Makefile2:1352: CMakeFiles/main_node.dir/all] Error 2
-make: *** [Makefile:141: all] Error 2

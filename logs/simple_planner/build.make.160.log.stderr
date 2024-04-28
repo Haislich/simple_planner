@@ -1,6 +1,0 @@
-/usr/bin/ld: CMakeFiles/main_node.dir/src/planner.cpp.o: in function `main':
-planner.cpp:(.text+0x353): multiple definition of `main'; CMakeFiles/main_node.dir/src/main_node.cpp.o:main_node.cpp:(.text+0x1f): first defined here
-collect2: error: ld returned 1 exit status
-make[2]: *** [CMakeFiles/main_node.dir/build.make:200: /home/lattinone/catkin_ws/simple_planner_ws/devel/.private/simple_planner/lib/simple_planner/main_node] Error 1
-make[1]: *** [CMakeFiles/Makefile2:1352: CMakeFiles/main_node.dir/all] Error 2
-make: *** [Makefile:141: all] Error 2
