@@ -1,6 +1,6 @@
 image: ./map.pgm
 resolution: 1
-origin: [-6.5, -3, 0] # !! initial x and y must be respectively equal to exactly half the width and the height of the image.
+origin: [-3, -3, 0] # !! initial x and y must be respectively equal to exactly half the width and the height of the image.
 negate: 0
 occupied_thresh: 0.51
 free_thresh: 0.49

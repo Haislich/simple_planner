@@ -10,9 +10,9 @@ MapCoord::MapCoord(int x, int y, int w, int h) {
 
 Map::Map(ros::NodeHandle node_handle) {
   ROS_INFO("Subscribed to map_serve_node");
-  map_sub = node_handle.subscribe("map", 100, &Map::mapCallBack, this);
+  map_sub = node_handle.subscribe("map", 100, &Map::map_callback, this);
 }
-void Map::mapCallBack(const nav_msgs::OccupancyGrid::ConstPtr& msg) {
+void Map::map_callback(const nav_msgs::OccupancyGrid::ConstPtr& msg) {
   occupancy_grid = *msg;
   msg_recieved = true;
 }

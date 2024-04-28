@@ -19,7 +19,7 @@ class Map {
  public:
   bool msg_recieved = false;
   Map(ros::NodeHandle node_handle);
-  void mapCallBack(const nav_msgs::OccupancyGrid::ConstPtr& msg);
+  void map_callback(const nav_msgs::OccupancyGrid::ConstPtr& msg);
   std::vector<int8_t, std::allocator<int8_t>> get_data();
   int get_width();
   int get_height();

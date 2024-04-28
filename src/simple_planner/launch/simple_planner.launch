@@ -7,6 +7,5 @@
     <node name="rviz" pkg="rviz" type="rviz"
         args="-d /home/lattinone/catkin_ws/simple_planner_ws/maps/map.rviz" required="true" />
     <!-- Start the main node -->
-    <node name="main_node" pkg="simple_planner" type="main_node" output="screen" required="true"
-        args="$(arg x) $(arg y)" />
+    <node name="main_node" pkg="simple_planner" type="main_node" output="screen" required="true" />
 </launch>

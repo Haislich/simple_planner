@@ -1,8 +1,0 @@
-prefix=/home/lattinone/catkin_ws/simple_planner_ws/devel/.private/simple_planner
-
-Name: simple_planner
-Description: Description of simple_planner
-Version: 0.0.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 

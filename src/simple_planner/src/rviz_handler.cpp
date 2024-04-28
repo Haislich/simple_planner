@@ -2,7 +2,6 @@
 RvizCoord::RvizCoord(int x, int y, int w, int h) {
   this->x = x - w / 2 + (1 - w % 2) * .5;
   this->y = h / 2 - y - (1 - h % 2) * .5;
-
   this->w = w;
   this->h = h;
 }
@@ -30,6 +29,23 @@ RvizMap::RvizMap(ros::NodeHandle node_handle) {
   robot_marker.color.g = 1.0;
   robot_marker.color.b = 0.0;
   robot_marker.lifetime = ros::Duration();
+
+  // Get initial position
+  initial_pos_sub = node_handle.subscribe("initialpose", 1,
+                                          &RvizMap::initial_pos_callback, this);
+}
+void RvizMap::initial_pos_callback(
+    const geometry_msgs::PoseWithCovarianceStamped::ConstPtr& msg) {
+  geometry_msgs::PoseWithCovarianceStamped initial_pose = *msg;
+  ROS_INFO("Received initial pose: %0.2f, %0.2f",
+           initial_pose.pose.pose.position.x,
+           initial_pose.pose.pose.position.y);
+  initial_pos_x = initial_pose.pose.pose.position.x < 0
+                      ? floor(initial_pose.pose.pose.position.x) + .5
+                      : ceil(initial_pose.pose.pose.position.x) - .5;
+  initial_pos_y = ceil(initial_pose.pose.pose.position.y) - .5;
+  std::cout << initial_pos_x << ", " << initial_pos_y << std::endl;
+  initial_pos_recieved = true;
 }
 void RvizMap::update_robot_position(RvizCoord coord) {
   robot_marker.pose.position.x = coord.x;
