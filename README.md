@@ -1,6 +1,7 @@
 # Introduction
 
 This is a ros package that given a pgm image, representing a map, let's you choose the initial robot position through rviz initial_pose and finds a path to the goal using BFS.
+
 ![example run](./docs/images/run_example_cover.gif)
 
 ## Setup
@@ -65,7 +66,7 @@ The map needs to be used by RViz for visualization purposes. However, we must pr
 
 |Example of visualization with origin $(-3,-3)$|Example of visualization with origin $(0,0)$|
 |-|-|
-|![example ok](./docs/images/rviz_map_ok.png)|![example nok](./docs/images/rviz_map_nok.png)|
+|![example ok](https://github.com/Haislich/simple_planner/blob/master/docs/images/rviz_map_nok.png)|![example nok](https://github.com/Haislich/simple_planner/blob/master/docs/images/rviz_map_nok.png)|
 
 Changing the origin adds an offset to compensate for RViz's behavior. Once we're in RViz, we need to pay attention to something else: RViz views the map as continuous space, so we need to convert it to discrete space.
 
