@@ -1,7 +1,8 @@
 # Introduction
 
 This is a ros package that given a pgm image, representing a map, let's you choose the initial robot position through rviz initial_pose and finds a path to the goal using BFS.
-![[example video]()]()
+
+[![example video](./docs/images/run_example_cover.png)](./docs/videos/run_example.mp4)
 
 ## Setup
 
@@ -34,7 +35,7 @@ To use this map effectively, we need to employ a map server. The map server read
 
 | Yaml configuration file   |  Raw image  | Actual image  |
 | -------- | ------- | ------- |
-| ![yaml](docs/images/map_yaml.png) |  ![raw](docs/images/map_pgm.png)    |![actual](docs/images/map_view.png)   |
+| ![yaml](./docs/images/map_yaml.png) |  ![raw](./docs/images/map_pgm.png)    |![actual](./docs/images/map_view.png)   |
 
 An important part is the origin section but will be discussed later. For now, it is important to note that when using trinary mode, the values read from the map topic published by the map server do not match the actual values found in the raw image. Instead, the following mapping applies:
 
@@ -65,7 +66,7 @@ The map needs to be used by RViz for visualization purposes. However, we must pr
 
 |Example of visualization with origin $(-3,-3)$|Example of visualization with origin $(0,0)$|
 |-|-|
-|![example ok](docs/images/rviz_map_ok.png)|![example nok](docs/images/rviz_map_nok.png)|
+|![example ok](./docs/images/rviz_map_ok.png)|![example nok](./docs/images/rviz_map_nok.png)|
 
 Changing the origin adds an offset to compensate for RViz's behavior. Once we're in RViz, we need to pay attention to something else: RViz views the map as continuous space, so we need to convert it to discrete space.
 

@@ -1,5 +1,5 @@
 {
-    "cmake.sourceDirectory": "/home/lattinone/catkin_ws/simple_planner_ws/src/simple_planner",
+    "cmake.sourceDirectory": "C:/Users/josed/Documents/simple_planner/src",
     "python.autoComplete.extraPaths": [
         "/opt/ros/noetic/lib/python3/dist-packages"
     ],
