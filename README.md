@@ -2,7 +2,7 @@
 
 This is a ros package that given a pgm image, representing a map, let's you choose the initial robot position through rviz initial_pose and finds a path to the goal using BFS.
 
-[![example video](./docs/images/run_example_cover.png)](./docs/videos/run_example.mp4)
+<video src="./docs/videos/run_example.mp4"></video>
 
 ## Setup
 
