@@ -1,5 +1,5 @@
 {
-    "cmake.sourceDirectory": "/home/lattinone/catkin_ws/simple_planner_ws/build/catkin_tools_prebuild",
+    "cmake.sourceDirectory": "/home/lattinone/catkin_ws/simple_planner_ws/src/simple_planner",
     "python.autoComplete.extraPaths": [
         "/opt/ros/noetic/lib/python3/dist-packages"
     ],
@@ -77,5 +77,6 @@
         "typeinfo": "cpp",
         "valarray": "cpp",
         "variant": "cpp"
-    }
+    },
+    "ros.distro": "noetic"
 }

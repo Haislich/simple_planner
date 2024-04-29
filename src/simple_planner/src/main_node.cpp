@@ -33,7 +33,6 @@ int main(int argc, char** argv) {
         rviz_map.initial_pos_x + w / 2 - (1 - w % 2) * .5;  // atoi(argv[1]);
     int initial_y =
         h / 2 - rviz_map.initial_pos_y - (1 - h % 2) * .5;  // atoi(argv[2]);
-    // std::cout << initial_x << ", " << initial_y << std::endl;
     MapCoord initial_position(initial_x, initial_y, w, h);
     while (rviz_map.rviz_pub.getNumSubscribers() < 1 &&
            rviz_path.path_pub.getNumSubscribers() < 1) {
@@ -41,7 +40,7 @@ int main(int argc, char** argv) {
     }
     rviz_map.update_robot_position(RvizCoord(initial_x, initial_y, w, h));
     if (map.get_element_at(initial_position) == MapElement::Obstacle) {
-      ROS_ERROR("No path could be found from this satrting position.");
+      ROS_ERROR("Cannot start on an obstacle.");
       return 1;
     }
     if (initial_x >= w || initial_x < 0 || initial_y >= h || initial_y < 0) {
